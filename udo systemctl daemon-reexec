@@ -1,0 +1,7 @@
+[0;1;31m×[0m deploy_repos.service - Infinity X One • Parallel Repo Deployment (NeoPulse-2025-001)
+     Loaded: loaded (]8;;file://penguin/etc/systemd/system/deploy_repos.service/etc/systemd/system/deploy_repos.service]8;;; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+    Drop-In: /run/systemd/system/service.d
+             └─]8;;file://penguin/run/systemd/system/service.d/zzz-lxc-service.confzzz-lxc-service.conf]8;;
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Thu 2025-09-04 21:26:00 EDT; 17ms ago
+    Process: 5436 ExecStart=/opt/infinity_x_one/deploy_repos.sh [0;1;31m(code=exited, status=1/FAILURE)[0m
+   Main PID: 5436 (code=exited, status=1/FAILURE)

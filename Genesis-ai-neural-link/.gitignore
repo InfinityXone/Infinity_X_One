@@ -1,0 +1,22 @@
+# System Ignore
+*.pyc
+__pycache__/
+*.log
+logs/
+*.zip
+
+# Secrets & Env
+.env
+.env.*
+*.key
+
+# Python Virtual Envs
+venv/
+.venv/
+
+# Node Modules (if present)
+node_modules/
+
+# OS junk
+.DS_Store
+Thumbs.db

@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: handshake }
+spec:
+  replicas: 2
+  selector: { matchLabels:{app:handshake} }
+  template:
+    metadata: { labels:{app:handshake} }
+    spec:
+      containers:
+      - name: handshake
+        image: python:3.11
+        command:["bash","-lc","backend/run_handshake.sh"]
+        ports: [{containerPort:8000}]
