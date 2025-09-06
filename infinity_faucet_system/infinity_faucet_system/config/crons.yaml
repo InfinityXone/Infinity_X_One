@@ -1,0 +1,8 @@
+- schedule: "*/10 * * * *"
+  command: "python3 backend/agents/infinity_worker.py log-profit"
+- schedule: "0 * * * *"
+  command: "python3 backend/agents/infinity_worker.py refresh-faucets"
+- schedule: "*/30 * * * *"
+  command: "python3 backend/agents/guardian_worker.py health-check"
+- schedule: "0 */4 * * *"
+  command: "python3 backend/agents/pickybot_worker.py performance-eval"

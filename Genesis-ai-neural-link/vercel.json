@@ -1,0 +1,1 @@
+{"version":2,"builds":[{"src":"backend/handshake_api.py","use":"@vercel/python"}],"routes":[{"src":"/(.*)","dest":"/backend/handshake_api.py"}]}
