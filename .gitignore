@@ -1,22 +1,24 @@
-# System Ignore
-*.pyc
+# Python
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node
+node_modules/
+.next/
+dist/
+
+# Virtual environments
+venv/
+.env
+.env.local
+
+# Logs
 *.log
 logs/
-*.zip
+*.err
 
-# Secrets & Env
-.env
-.env.*
-*.key
-
-# Python Virtual Envs
-venv/
-.venv/
-
-# Node Modules (if present)
-node_modules/
-
-# OS junk
+# OS/System
 .DS_Store
 Thumbs.db
