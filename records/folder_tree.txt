@@ -856,6 +856,7 @@
 │   ├── guardian_drive_watchdog.sh
 │   ├── ignition_master.sh
 │   ├── install_strategy_prompt.sh
+│   ├── nl.sh
 │   ├── organize_infinity.sh
 │   ├── run_247_daemon.sh
 │   ├── setup_cli.sh
@@ -1027,4 +1028,4 @@
     └── logs
         └── stdout.log
 
-237 directories, 791 files
+237 directories, 792 files
