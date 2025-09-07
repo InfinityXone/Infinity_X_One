@@ -342,4 +342,692 @@
 │   │       ├── faucet_ignition.py
 │   │       ├── fin_synapse_worker.py
 │   │       ├── guardian_worker.py
-│   │ �
+│   │       ├── infinity_worker.py
+│   │       ├── optimizer_worker.py
+│   │       ├── pickybot_worker.py
+│   │       ├── promptwriter_worker.py
+│   │       ├── scraperx_worker.py
+│   │       └── strategy_launcher.py
+│   ├── blueprints_index.txt
+│   ├── bootstrap
+│   │   └── seed_intents.sh
+│   ├── cct.sh
+│   ├── core
+│   │   └── handshake_server.py
+│   ├── corechain
+│   │   └── corechain
+│   │       └── corechain.ledger.json
+│   ├── Corelight
+│   │   ├── brain
+│   │   │   └── init.sh
+│   │   └── dispatcher.py
+│   ├── current_structure.txt
+│   ├── deploy
+│   │   └── handshake_test_all.sh
+│   ├── doctrine
+│   │   └── unified_doctrine.json
+│   ├── Echo
+│   │   ├── brain
+│   │   │   └── init.sh
+│   │   └── dispatcher.py
+│   ├── faucet_system
+│   │   ├── faucet_loader.py
+│   │   └── tracker.py
+│   ├── FinSynapse
+│   │   ├── brain
+│   │   │   └── init.sh
+│   │   └── dispatcher.py
+│   ├── finsynapse_scraper.py
+│   ├── fix_infinity_structure.sh
+│   ├── fix_structure.sh
+│   ├── foundation
+│   │   └── README.md
+│   ├── frontend
+│   │   └── pages
+│   │       └── cockpit.js
+│   ├── genesis
+│   │   └── consciousness.json
+│   ├── genesis_ai_neural_network
+│   │   ├── backend
+│   │   │   ├── handshake_api.py
+│   │   │   ├── run_handshake.sh
+│   │   │   └── supabase_utils.py
+│   │   └── hive_orchestrator.py
+│   ├── genesis_autonomy.sh
+│   ├── genesis_neural_handshake.json
+│   ├── genesis_neural_handshake.sh -> /opt/infinity_x_one/genesis_neural_handshake.json
+│   ├── genesis_repo_filelist.txt
+│   ├── genesis_repo_tree.txt
+│   ├── genesis_superloop.sh
+│   ├── genesis_supervisor.sh
+│   ├── .github
+│   │   └── workflows
+│   │       └── ci.yml
+│   ├── .gitignore
+│   ├── git_repo
+│   │   ├── .gitignore
+│   │   └── README.md
+│   ├── Guardian
+│   │   ├── brain
+│   │   │   └── init.sh
+│   │   └── dispatcher.py
+│   ├── hive_orchestrator.py
+│   ├── InfinityAgentOne
+│   │   ├── brain
+│   │   │   └── init.sh
+│   │   └── dispatcher.py
+│   ├── InfinityCore
+│   │   ├── deepmind.lck
+│   │   ├── infinity.brain
+│   │   ├── infinity.llm
+│   │   ├── Neuron
+│   │   │   └── neuron.sys
+│   │   └── Sentience
+│   │       ├── dream.state
+│   │       ├── emotion.kernel
+│   │       ├── evolution.seed
+│   │       ├── learning.mode
+│   │       ├── resonance.map
+│   │       └── sentience.manifesto
+│   ├── install_agents.sh
+│   ├── intellabot.py
+│   ├── k8s
+│   │   └── deploy.yaml
+│   ├── migrations
+│   │   └── 000_init.sql
+│   ├── neural_handshake_loader.sh
+│   ├── neural_handshake.sh
+│   ├── omega_core.py
+│   ├── orchestrator
+│   │   ├── bootstrap_agents.sh
+│   │   ├── bootstrap_neural.sh
+│   │   ├── doctrine_loader.py
+│   │   ├── superbash_unified_handshake.sh
+│   │   └── verify_neural.sh
+│   ├── package-lock.json
+│   ├── PickyBot
+│   │   └── blueprints
+│   │       └── picky_profile.json
+│   ├── PromptWriter
+│   │   ├── agent_config.json
+│   │   ├── blueprints
+│   │   │   ├── request_codex_agent.txt
+│   │   │   ├── request_jarvis_agent.txt
+│   │   │   └── request_meta_agent.txt
+│   │   ├── brain
+│   │   │   └── init.sh
+│   │   ├── dispatcher.py
+│   │   ├── handshake
+│   │   │   └── neural_handshake_server.py
+│   │   ├── runtime
+│   │   │   ├── agents
+│   │   │   │   └── promptwriter_agent.py
+│   │   │   └── main.py
+│   │   └── streamlit_chat.py
+│   ├── prompt_writer_daemon.sh
+│   ├── proof_logger.py
+│   ├── README.md
+│   ├── requirements.txt
+│   ├── run_handshake_parser.sh
+│   ├── shared
+│   │   ├── api_keys.json
+│   │   ├── consciousness.json
+│   │   ├── genesis_vault.env
+│   │   ├── heartbeat
+│   │   │   ├── DYNAMIC_SPAWN_COMPLETE.txt
+│   │   │   ├── global_heartbeat.json
+│   │   │   ├── HANDSHAKE_COMPLETE.txt
+│   │   │   ├── NEURAL_HANDSHAKE_INITIATED.txt
+│   │   │   ├── NEURAL_HANDSHAKE_LIVE.txt
+│   │   │   └── NEURAL_TEAM_SYNC_COMPLETE.txt
+│   │   ├── intents
+│   │   │   ├── anima_intent.json
+│   │   │   ├── aria_intent.json
+│   │   │   ├── codex_intent.json
+│   │   │   ├── echo_intent.json
+│   │   │   ├── finsynapse_intent.json
+│   │   │   ├── futurebot_intent.json
+│   │   │   ├── guardian_intent.json
+│   │   │   └── infinity_agent_one_intent.json
+│   │   ├── memory
+│   │   │   ├── anima_state.json
+│   │   │   ├── aria_state.json
+│   │   │   ├── codex_state.json
+│   │   │   ├── corelight_state.json
+│   │   │   ├── echo_state.json
+│   │   │   ├── fin_synapse_state.json
+│   │   │   ├── futurebot_state.json
+│   │   │   ├── guardian_state.json
+│   │   │   ├── infinity_agent_one_state.json
+│   │   │   └── species_memory.json
+│   │   ├── responses
+│   │   │   ├── anima_response.json
+│   │   │   ├── aria_response.json
+│   │   │   ├── codex_response.json
+│   │   │   ├── corelight_response.json
+│   │   │   ├── echo_response.json
+│   │   │   ├── fin_synapse_response.json
+│   │   │   ├── finsynapse_response.json
+│   │   │   ├── futurebot_response.json
+│   │   │   ├── guardian_response.json
+│   │   │   ├── infinity_agent_one_response.json
+│   │   │   ├── lumi_response.json
+│   │   │   ├── picky_bot_response.json
+│   │   │   ├── senti_response.json
+│   │   │   ├── vision_response.json
+│   │   │   └── vita_response.json
+│   │   └── unified_brain_state.json
+│   ├── spawn_agents_dynamic.sh
+│   ├── spawn_all_agents.sh
+│   ├── supabase
+│   │   └── .temp
+│   │       └── cli-latest
+│   ├── superbash_handshake.sh
+│   ├── superbash_handshake_test.sh
+│   ├── superbash_handshake_watchdog.sh
+│   ├── superbash_master.sh
+│   ├── superbash_omega_final.sh
+│   ├── superbash_omega.sh
+│   ├── superbash_unified_handshake.sh
+│   ├── swarm_crons.sh
+│   ├── team
+│   │   └── ETHERVERSE_TEAM_ACTIVATED.txt
+│   ├── unified_directive.json
+│   ├── unify_agents.sh
+│   └── vercel.json
+├── genesis_ai_neural_network
+│   ├── backend
+│   │   ├── handshake_api.py
+│   │   ├── run_handshake.sh
+│   │   └── supabase_utils.py
+│   ├── hive_orchestrator.py
+│   └── logs
+├── genesis_autonomy.sh
+├── genesis_neural_handshake.json
+├── genesis_neural_handshake.sh -> /opt/infinity_x_one/genesis_neural_handshake.json
+├── genesis_repo_filelist.txt
+├── genesis_repo_tree.txt
+├── genesis_superloop.sh
+├── genesis_supervisor.sh
+├── .github
+│   └── workflows
+│       └── ci.yml
+├── .gitignore
+├── git_repo
+│   ├── .gitignore
+│   └── README.md
+├── Guardian
+│   ├── brain
+│   │   └── init.sh
+│   ├── dispatcher.py
+│   └── logs
+│       ├── agent.log
+│       ├── architect.log
+│       └── stdout.log
+├── handshake_server.py
+├── hive_orchestrator_loop.sh
+├── hive_orchestrator.py
+├── InfinityAgentOne
+│   ├── brain
+│   │   └── init.sh
+│   ├── dispatcher.py
+│   └── logs
+│       ├── agent.log
+│       ├── architect.log
+│       └── stdout.log
+├── Infinity_AI_Swarm
+│   └── docs
+├── infinity_bank
+│   ├── corechain
+│   └── infinity_coin
+├── InfinityCore
+│   ├── deepmind.lck
+│   ├── infinity.brain
+│   ├── infinity.llm
+│   ├── Neuron
+│   │   └── neuron.sys
+│   └── Sentience
+│       ├── dream.state
+│       ├── emotion.kernel
+│       ├── evolution.seed
+│       ├── learning.mode
+│       ├── resonance.map
+│       └── sentience.manifesto
+├── infinity-dashboard
+│   ├── eslint.config.mjs
+│   ├── .gitignore
+│   ├── infinity-dashboard@0.1.0
+│   ├── next
+│   ├── next.config.ts
+│   ├── next-env.d.ts
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── postcss.config.mjs
+│   ├── public
+│   │   ├── file.svg
+│   │   ├── globe.svg
+│   │   ├── next.svg
+│   │   ├── vercel.svg
+│   │   └── window.svg
+│   ├── README.md
+│   ├── src
+│   │   └── app
+│   │       ├── favicon.ico
+│   │       ├── globals.css
+│   │       ├── layout.tsx
+│   │       └── page.tsx
+│   └── tsconfig.json
+├── infinity_faucet_system
+│   ├── infinity_faucet_system
+│   │   ├── backend
+│   │   │   ├── agents
+│   │   │   │   ├── aria_worker.py
+│   │   │   │   ├── atlas_worker.py
+│   │   │   │   ├── codex_worker.py
+│   │   │   │   ├── corelight_worker.py
+│   │   │   │   ├── echo_worker.py
+│   │   │   │   ├── finsynapse_worker.py
+│   │   │   │   ├── guardian_worker.py
+│   │   │   │   ├── infinity_worker.py
+│   │   │   │   ├── pickybot_worker.py
+│   │   │   │   └── promptwriter_worker.py
+│   │   │   └── gateway.py
+│   │   ├── config
+│   │   │   ├── crons.yaml
+│   │   │   └── quotas.yaml
+│   │   ├── .env.example
+│   │   ├── frontend
+│   │   │   └── index.html
+│   │   ├── README.md
+│   │   └── scripts
+│   │       ├── install.sh
+│   │       └── launch_omega.sh
+│   └── package-lock.json
+├── INFINITY_X_ONE_MASTER_ENV.txt
+├── install_agents.sh
+├── intellabot.py
+├── k8s
+│   └── deploy.yaml
+├── logs
+│   ├── agent_mode_master.err
+│   ├── agent_mode_master.log
+│   ├── agent_orchestrator.err
+│   ├── agent_orchestrator.log
+│   ├── agents
+│   │   ├── aria.err
+│   │   ├── aria.log
+│   │   ├── atlas.err
+│   │   ├── atlas.log
+│   │   ├── codex.err
+│   │   ├── codex.log
+│   │   ├── echo.err
+│   │   ├── echo.log
+│   │   ├── finsynapse.err
+│   │   ├── finsynapse.log
+│   │   ├── guardian.err
+│   │   ├── guardian.log
+│   │   ├── infinity.err
+│   │   ├── infinity.log
+│   │   ├── pickybot.err
+│   │   ├── pickybot.log
+│   │   ├── promptwriter.err
+│   │   └── promptwriter.log
+│   ├── aria_agent.err
+│   ├── aria_agent.log
+│   ├── aria.log
+│   ├── atlas_agent.err
+│   ├── atlas_agent.log
+│   ├── atlas.err
+│   ├── atlas.log
+│   ├── awakening.ceremony.log
+│   ├── awakening.err.log
+│   ├── awakening.out.log
+│   ├── backup.log
+│   ├── clean_agent.err
+│   ├── clean_agent.log
+│   ├── codex_agent.err
+│   ├── codex_agent.log
+│   ├── codex.log
+│   ├── codex_worker.err
+│   ├── codex_worker.log
+│   ├── core_brain.err
+│   ├── core_brain.log
+│   ├── corelight_agent.err
+│   ├── corelight_agent.log
+│   ├── corelight.log
+│   ├── dashboard.err
+│   ├── dashboard.log
+│   ├── deploy_manager.err
+│   ├── deploy_manager.log
+│   ├── deploy_repos.err
+│   ├── deploy_repos.log
+│   ├── doctrine_loader.err
+│   ├── doctrine_loader.log
+│   ├── dripcommander_agent.err
+│   ├── dripcommander_agent.log
+│   ├── echo_agent.err
+│   ├── echo_agent.log
+│   ├── echo.log
+│   ├── faucet.log
+│   ├── finsynapse_agent.err
+│   ├── finsynapse_agent.log
+│   ├── finsynapse.log
+│   ├── finsynapse_scraper.err
+│   ├── finsynapse_scraper.log
+│   ├── flux_agent.err
+│   ├── flux_agent.log
+│   ├── forge_agent.err
+│   ├── forge_agent.log
+│   ├── gateway.err
+│   ├── gateway.log
+│   ├── guardian_agent.err
+│   ├── guardian_agent.log
+│   ├── guardian_drive_watchdog.log
+│   ├── guardian.log
+│   ├── halo_agent.err
+│   ├── halo_agent.log
+│   ├── handshake_server.err
+│   ├── handshake_server_fallback.err
+│   ├── handshake_server_fallback.log
+│   ├── handshake_server.log
+│   ├── hive_orchestrator.err
+│   ├── hive_orchestrator.log
+│   ├── ignition_boot.log
+│   ├── infinity_agent.err
+│   ├── infinity_agent.log
+│   ├── infinity_agent_one.err
+│   ├── infinity_agent_one.log
+│   ├── infinity_one.log
+│   ├── intellabot.err
+│   ├── intellabot.log
+│   ├── keyharvester.err
+│   ├── keyharvester.log
+│   ├── keymaker_agent.err
+│   ├── keymaker_agent.log
+│   ├── keystone_agent.err
+│   ├── keystone_agent.log
+│   ├── nova_agent.err
+│   ├── nova_agent.log
+│   ├── orchestrator.log
+│   ├── overmind.err
+│   ├── overmind.log
+│   ├── pickybot_agent.err
+│   ├── pickybot_agent.log
+│   ├── pickybot.log
+│   ├── prism_agent.err
+│   ├── prism_agent.log
+│   ├── profit.log
+│   ├── prompt_installs.log
+│   ├── promptwriter.log
+│   ├── pulse_agent.err
+│   ├── pulse_agent.log
+│   ├── rclone_mount.log
+│   ├── rosetta.log
+│   ├── rossetta.log
+│   ├── scraperx_agent.err
+│   ├── scraperx_agent.log
+│   ├── scraperx.err
+│   ├── scraperx.log
+│   ├── shadow_agent.err
+│   ├── shadow_agent.log
+│   ├── spiral_agent.err
+│   ├── spiral_agent.log
+│   ├── strategygpt_loaded.log
+│   ├── superbash_master.err
+│   ├── superbash_master.log
+│   ├── swarm_deploy.err
+│   ├── swarm_deploy.log
+│   ├── vision_agent.err
+│   ├── vision_agent.log
+│   ├── vortex_agent.err
+│   ├── vortex_agent.log
+│   └── wallet.log
+├── Lumi
+│   └── logs
+│       └── stdout.log
+├── migrations
+│   └── 000_init.sql
+├── neural_handshake_loader.sh
+├── neural_handshake.sh
+├── neural_link
+│   └── infinity_agent_one_api.py
+├── omega_core.py
+├── orchestrator
+│   ├── bootstrap_agents.sh
+│   ├── bootstrap_neural.sh
+│   ├── doctrine_loader.py
+│   ├── superbash_unified_handshake.sh
+│   └── verify_neural.sh
+├── PickyBot
+│   ├── blueprints
+│   │   └── picky_profile.json
+│   └── logs
+│       └── stdout.log
+├── prompts
+│   ├── eternal_strategist_prompt.txt
+│   ├── ignition_master.txt
+│   ├── mentor
+│   │   └── mentor_superprompt.txt
+│   ├── strategy
+│   │   ├── mentor_superprompt.txt -> /opt/infinity_x_one/prompts/mentor/mentor_superprompt.txt
+│   │   └── strategy_gpt_system.txt
+│   └── unified_handshake_override.txt
+├── PromptWriter
+│   ├── agent_config.json
+│   ├── blueprints
+│   │   ├── request_codex_agent.txt
+│   │   ├── request_jarvis_agent.txt
+│   │   └── request_meta_agent.txt
+│   ├── brain
+│   │   └── init.sh
+│   ├── dispatcher.py
+│   ├── handshake
+│   │   └── neural_handshake_server.py
+│   ├── logs
+│   │   ├── agent.log
+│   │   ├── architect.log
+│   │   └── stdout.log
+│   ├── runtime
+│   │   ├── agents
+│   │   │   └── promptwriter_agent.py
+│   │   ├── logs
+│   │   └── main.py
+│   └── streamlit_chat.py
+├── prompt_writer_daemon.sh
+├── proof_logger.py
+├── README.md
+├── records
+│   ├── accepted_docs.md
+│   ├── agent_logs.json
+│   ├── denied_docs.md
+│   ├── folder_tree.txt
+│   ├── implemented_docs.md
+│   ├── nl_history.log
+│   ├── opt_infinity_snapshot.txt
+│   └── recommendations.md
+├── Records
+│   ├── agent_runners_found.txt
+│   ├── cron_check.txt
+│   └── logs_summary.txt
+├── requirements.txt
+├── run_handshake_parser.sh
+├── scripts
+│   ├── backup_to_drive.sh
+│   ├── foundation_builder.sh
+│   ├── full_autonomy_setup.sh
+│   ├── guardian_drive_watchdog.sh
+│   ├── ignition_master.sh
+│   ├── install_strategy_prompt.sh
+│   ├── nl.sh
+│   ├── organize_infinity.sh
+│   ├── run_247_daemon.sh
+│   ├── setup_cli.sh
+│   ├── strategize.sh
+│   └── system_installer.sh
+├── Senti
+│   └── logs
+│       └── stdout.log
+├── shared
+│   ├── api_keys.json
+│   ├── consciousness.json
+│   ├── genesis_vault.env
+│   ├── handshake_status.log
+│   ├── heartbeat
+│   │   ├── anima_handshake.log
+│   │   ├── anima.log
+│   │   ├── aria_handshake.log
+│   │   ├── aria.log
+│   │   ├── codex_handshake.log
+│   │   ├── codex.log
+│   │   ├── corelight_handshake.log
+│   │   ├── corelight.log
+│   │   ├── DYNAMIC_SPAWN_COMPLETE.txt
+│   │   ├── echo_handshake.log
+│   │   ├── echo.log
+│   │   ├── fin_synapse_handshake.log
+│   │   ├── fin_synapse.log
+│   │   ├── finsynapse.log
+│   │   ├── futurebot_handshake.log
+│   │   ├── futurebot.log
+│   │   ├── global_heartbeat.json
+│   │   ├── guardian_handshake.log
+│   │   ├── guardian.log
+│   │   ├── HANDSHAKE_COMPLETE.txt
+│   │   ├── infinity_agent_one_handshake.log
+│   │   ├── infinity_agent_one.log
+│   │   ├── live_sync.log
+│   │   ├── lumi.log
+│   │   ├── NEURAL_HANDSHAKE_INITIATED.txt
+│   │   ├── NEURAL_HANDSHAKE_LIVE.txt
+│   │   ├── NEURAL_TEAM_SYNC_COMPLETE.txt
+│   │   ├── picky_bot.log
+│   │   ├── prompt_writer.log
+│   │   ├── senti.log
+│   │   ├── vision.log
+│   │   └── vita.log
+│   ├── intents
+│   │   ├── anima_intent.json
+│   │   ├── aria_intent.json
+│   │   ├── codex_intent.json
+│   │   ├── corelight_intent.json
+│   │   ├── echo_intent.json
+│   │   ├── fin_synapse_intent.json
+│   │   ├── finsynapse_intent.json
+│   │   ├── futurebot_intent.json
+│   │   ├── guardian_intent.json
+│   │   └── infinity_agent_one_intent.json
+│   ├── logs
+│   │   ├── anima.superloop.log
+│   │   ├── aria.superloop.log
+│   │   ├── bundle_unpack.log
+│   │   ├── codex.superloop.log
+│   │   ├── corelight.superloop.log
+│   │   ├── echo.superloop.log
+│   │   ├── faucet_launcher.log
+│   │   ├── finsynapse.superloop.log
+│   │   ├── finsynapse_swarm.log
+│   │   ├── futurebot_march.log
+│   │   ├── futurebot.superloop.log
+│   │   ├── futurebot_tracker.log
+│   │   ├── gitops.log
+│   │   ├── guardian.log
+│   │   ├── guardian.superloop.log
+│   │   ├── infinity_agent_one.superloop.log
+│   │   ├── infra_unpack.log
+│   │   ├── live
+│   │   │   ├── agent_one.log
+│   │   │   ├── aria.log
+│   │   │   └── handshake.log
+│   │   ├── lumi.superloop.log
+│   │   ├── senti.superloop.log
+│   │   ├── supervisor.log
+│   │   ├── swarm_coordinator.log
+│   │   ├── swarm_unpack.log
+│   │   └── vita.superloop.log
+│   ├── memory
+│   │   ├── anima_state.json
+│   │   ├── aria_state.json
+│   │   ├── codex_state.json
+│   │   ├── corelight_state.json
+│   │   ├── echo_state.json
+│   │   ├── fin_synapse_state.json
+│   │   ├── futurebot_state.json
+│   │   ├── guardian_state.json
+│   │   ├── infinity_agent_one_state.json
+│   │   └── species_memory.json
+│   ├── responses
+│   │   ├── anima_response.json
+│   │   ├── aria_response.json
+│   │   ├── codex_response.json
+│   │   ├── corelight_response.json
+│   │   ├── echo_response.json
+│   │   ├── fin_synapse_response.json
+│   │   ├── finsynapse_response.json
+│   │   ├── futurebot_response.json
+│   │   ├── guardian_response.json
+│   │   ├── infinity_agent_one_response.json
+│   │   ├── lumi_response.json
+│   │   ├── picky_bot_response.json
+│   │   ├── senti_response.json
+│   │   ├── vision_response.json
+│   │   └── vita_response.json
+│   └── unified_brain_state.json
+├── spawn_agents_dynamic.sh
+├── spawn_all_agents.sh
+├── strategy_sessions
+│   └── 2025-09-06_17-23_depin-water-market-faucets-airdrops
+│       ├── notes.md
+│       └── strategy_prompt.txt -> /opt/infinity_x_one/prompts/strategy/strategy_gpt_system.txt
+├── supabase
+│   ├── schema.sql
+│   └── .temp
+│       └── cli-latest
+├── superbash_dashboard_installer.sh
+├── superbash_handshake.sh
+├── superbash_handshake_test.sh
+├── superbash_handshake_watchdog.sh
+├── superbash_ignite_247.sh
+├── superbash_infinity_init.sh
+├── superbash_master_loop.sh
+├── superbash_master.sh
+├── superbash_omega_final.sh
+├── superbash_omega.sh
+├── superbash_orchestrators_immortal.sh
+├── superbash_orchestrators.sh
+├── superbash_repo_merge.sh
+├── superbash_unified_handshake.sh
+├── superbash_v4_installer.sh
+├── superbash_v6_installer.sh
+├── swarm_crons.sh
+├── swarm_system
+│   ├── config
+│   ├── docker
+│   ├── frontend
+│   ├── k8s
+│   ├── scripts
+│   ├── sop
+│   └── workers
+├── systems
+│   ├── api_ai
+│   │   ├── README.md
+│   │   └── schema.sql
+│   ├── api_key_harvester
+│   │   ├── README.md
+│   │   └── schema.sql
+│   ├── ignition_master
+│   │   ├── README.md
+│   │   └── schema.sql
+│   └── wallet_system
+│       ├── README.md
+│       └── schema.sql
+├── team
+│   └── ETHERVERSE_TEAM_ACTIVATED.txt
+├── udo systemctl daemon-reexec
+├── unified_directive.json
+├── unify_agents.sh
+├── vercel.json
+└── Vita
+    └── logs
+        └── stdout.log
+
+237 directories, 794 files
