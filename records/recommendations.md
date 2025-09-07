@@ -1,1 +1,1 @@
-# 💡 Recommendations
+# Recommendations
