@@ -970,4 +970,64 @@
 │   │   ├── picky_bot_response.json
 │   │   ├── senti_response.json
 │   │   ├── vision_response.json
-│   │   └── vita_response.j
+│   │   └── vita_response.json
+│   └── unified_brain_state.json
+├── spawn_agents_dynamic.sh
+├── spawn_all_agents.sh
+├── strategy_sessions
+│   └── 2025-09-06_17-23_depin-water-market-faucets-airdrops
+│       ├── notes.md
+│       └── strategy_prompt.txt -> /opt/infinity_x_one/prompts/strategy/strategy_gpt_system.txt
+├── supabase
+│   ├── schema.sql
+│   └── .temp
+│       └── cli-latest
+├── superbash_dashboard_installer.sh
+├── superbash_handshake.sh
+├── superbash_handshake_test.sh
+├── superbash_handshake_watchdog.sh
+├── superbash_ignite_247.sh
+├── superbash_infinity_init.sh
+├── superbash_master_loop.sh
+├── superbash_master.sh
+├── superbash_omega_final.sh
+├── superbash_omega.sh
+├── superbash_orchestrators_immortal.sh
+├── superbash_orchestrators.sh
+├── superbash_repo_merge.sh
+├── superbash_unified_handshake.sh
+├── superbash_v4_installer.sh
+├── superbash_v6_installer.sh
+├── swarm_crons.sh
+├── swarm_system
+│   ├── config
+│   ├── docker
+│   ├── frontend
+│   ├── k8s
+│   ├── scripts
+│   ├── sop
+│   └── workers
+├── systems
+│   ├── api_ai
+│   │   ├── README.md
+│   │   └── schema.sql
+│   ├── api_key_harvester
+│   │   ├── README.md
+│   │   └── schema.sql
+│   ├── ignition_master
+│   │   ├── README.md
+│   │   └── schema.sql
+│   └── wallet_system
+│       ├── README.md
+│       └── schema.sql
+├── team
+│   └── ETHERVERSE_TEAM_ACTIVATED.txt
+├── udo systemctl daemon-reexec
+├── unified_directive.json
+├── unify_agents.sh
+├── vercel.json
+└── Vita
+    └── logs
+        └── stdout.log
+
+237 directories, 794 files
