@@ -133,6 +133,9 @@
 ├── backend
 │   ├── agents
 │   ├── handshake_api.py
+│   ├── handshake_server.py
+│   ├── init
+│   │   └── rosetta_loader.py
 │   ├── kernel
 │   │   ├── autonomy
 │   │   │   └── ignition.sh
@@ -143,21 +146,45 @@
 │   ├── rags
 │   │   └── rag_loader.py
 │   ├── supabase_utils.py
+│   ├── wallet
+│   │   ├── generator.py
+│   │   ├── __init__.py
+│   │   └── manager.py
 │   └── workers
+│       ├── anomaly_worker.py
 │       ├── api_key_harvester.py
+│       ├── api_key_rotation_state.json
+│       ├── api_key_rotator.py
 │       ├── aria_worker.py
+│       ├── atlas_worker.py
 │       ├── codex_worker.py
 │       ├── compute_account_finder.py
+│       ├── core_improver.py
+│       ├── echo_feedback.py
 │       ├── echo_worker.py
 │       ├── faucet_ignition.py
+│       ├── faucet_worker.py
 │       ├── fin_synapse_worker.py
+│       ├── github_scanner_worker.py
 │       ├── guardian_worker.py
+│       ├── headless_browser_agent.py
 │       ├── infinity_worker.py
+│       ├── __init__.py
+│       ├── key_harvester.py
+│       ├── knowledge_scanner.py
+│       ├── neural_self_rewriter.py
 │       ├── optimizer_worker.py
 │       ├── pickybot_worker.py
 │       ├── promptwriter_worker.py
+│       ├── replicator_worker.py
+│       ├── resource_allocator.py
+│       ├── sandbox_mutator.py
+│       ├── scraper_unified_worker.py
 │       ├── scraperx_worker.py
-│       └── strategy_launcher.py
+│       ├── strategy_launcher.py
+│       ├── wallet_monitor.py
+│       ├── wallet_rotation_state.json
+│       └── wallet_rotator.py
 ├── blueprints_index.txt
 ├── bootstrap
 │   └── seed_intents.sh
@@ -166,6 +193,8 @@
 │   └── logs
 │       ├── codex.log
 │       └── stdout.log
+├── config
+│   └── agent_replicator.map.json
 ├── core
 │   └── handshake_server.py
 ├── corechain
@@ -225,12 +254,30 @@
 ├── foundation
 │   └── README.md
 ├── frontend
+│   ├── package.json
 │   ├── pages
+│   │   ├── agents.js
 │   │   ├── api
 │   │   │   └── invoke
-│   │   └── cockpit.js
-│   └── public
-│       └── icons
+│   │   ├── _app.js
+│   │   ├── cockpit.js
+│   │   ├── dashboard.js
+│   │   ├── faucets.js
+│   │   ├── index.js
+│   │   ├── predict.js
+│   │   ├── scraper.js
+│   │   ├── settings.js
+│   │   └── wallets.js
+│   ├── postcss.config.js
+│   ├── public
+│   │   ├── icons
+│   │   │   ├── icon-192x192.png
+│   │   │   └── icon-512x512.png
+│   │   ├── manifest.json
+│   │   └── service-worker.js
+│   ├── styles
+│   │   └── globals.css
+│   └── tailwind.config.js
 ├── FutureBot
 │   └── logs
 │       └── stdout.log
@@ -551,6 +598,7 @@
 ├── genesis_supervisor.sh
 ├── .github
 │   └── workflows
+│       ├── auto-push.yml
 │       └── ci.yml
 ├── .gitignore
 ├── git_repo
@@ -647,7 +695,15 @@
 ├── install_agents.sh
 ├── intellabot.py
 ├── k8s
-│   └── deploy.yaml
+│   ├── agent-deployment.yaml
+│   ├── backend-service.yaml
+│   ├── cronjobs.yaml
+│   ├── deploy.yaml
+│   ├── env-secret.yaml
+│   ├── handshake-server.yaml
+│   ├── ingress.yaml
+│   ├── namespace.yaml
+│   └── workers.yaml
 ├── logs
 │   ├── agent_mode_master.err
 │   ├── agent_mode_master.log
@@ -786,7 +842,8 @@
 │   └── logs
 │       └── stdout.log
 ├── migrations
-│   └── 000_init.sql
+│   ├── 000_init.sql
+│   └── omega_schema_patch.sql
 ├── neural_handshake_loader.sh
 ├── neural_handshake.sh
 ├── neural_link
@@ -808,6 +865,7 @@
 │   ├── ignition_master.txt
 │   ├── mentor
 │   │   └── mentor_superprompt.txt
+│   ├── rosetta_prompt.txt
 │   ├── strategy
 │   │   ├── mentor_superprompt.txt -> /opt/infinity_x_one/prompts/mentor/mentor_superprompt.txt
 │   │   └── strategy_gpt_system.txt
@@ -853,6 +911,7 @@
 ├── run_handshake_parser.sh
 ├── scripts
 │   ├── backup_to_drive.sh
+│   ├── deploy.sh
 │   ├── foundation_builder.sh
 │   ├── full_autonomy_setup.sh
 │   ├── guardian_drive_watchdog.sh
@@ -860,6 +919,7 @@
 │   ├── install_strategy_prompt.sh
 │   ├── nl.sh
 │   ├── organize_infinity.sh
+│   ├── push_to_github.sh
 │   ├── run_247_daemon.sh
 │   ├── setup_cli.sh
 │   ├── strategize.sh
@@ -1031,4 +1091,4 @@
     └── logs
         └── stdout.log
 
-237 directories, 795 files
+241 directories, 851 files
