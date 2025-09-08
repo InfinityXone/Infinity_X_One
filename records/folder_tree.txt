@@ -917,7 +917,6 @@
 │   ├── ignition_master.sh
 │   ├── install_strategy_prompt.sh
 │   ├── nl.sh
-│   ├── .nl.sh.swp
 │   ├── organize_infinity.sh
 │   ├── push_to_github.sh
 │   ├── run_247_daemon.sh
@@ -1091,4 +1090,4 @@
     └── logs
         └── stdout.log
 
-241 directories, 851 files
+241 directories, 850 files
