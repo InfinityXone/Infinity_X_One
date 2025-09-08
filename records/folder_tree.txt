@@ -92,14 +92,20 @@
 │   └── rosetta_prompt.txt
 ├── README.md
 ├── records
+│   ├── agent_diag.log
+│   ├── atlas_launch.log
+│   ├── deploy_run.log
 │   ├── folder_tree.txt
+│   ├── git_status.log
 │   ├── nl_history.log
+│   ├── rag_test.log
 │   └── vercel_deploy.log
 └── scripts
     ├── deploy.sh
     ├── fix_systemd.sh
     ├── fix_systemd.sh.save
     ├── nl.sh
+    ├── parallel_deploy.sh
     └── push_to_github.sh
 
-22 directories, 81 files
+22 directories, 87 files
