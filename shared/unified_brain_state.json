@@ -1,6 +1,0 @@
-{
-  "memory_core": "/opt/infinity_x_one/memory/unified_memory.json",
-  "graph_links": "/opt/infinity_x_one/graph/knowledge.graph",
-  "evolution_code": "/opt/infinity_x_one/evolve/evolution_engine.py",
-  "heartbeat": "Sat Sep  6 11:40:59 2025"
-}
