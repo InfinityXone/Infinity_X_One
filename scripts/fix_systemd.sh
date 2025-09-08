@@ -1,26 +1,29 @@
 #!/usr/bin/env bash
 set -euo pipefail
-echo "🔧 Fixing systemd service and verifying setup..."
+
+echo "🔧 Bringing systemd service back online..."
 
 BASE="/opt/infinity_x_one"
 SERVICE_FILE="/etc/systemd/system/hive_orchestrator.service"
 
-# Check required files exist
+# Step 1: Validate essential components
+echo "• Verifying critical files exist..."
 for FILE in "$BASE/venv/bin/python" "$BASE/hive_orchestrator.py"; do
-  if [ ! -f "$FILE" ]; then
-    echo "❌ Missing file: $FILE"
+  if [ -f "$FILE" ]; then
+    echo "  ✅ Found: $FILE"
   else
-    echo "✅ Found: $FILE"
+    echo "  ❌ Missing: $FILE"
+    exit 1
   fi
 done
 
-# Ensure the orchestrator script is executable
-echo "Making orchestrator executable..."
-sudo chmod +x "$BASE/hive_orchestrator.py" || true
+# Step 2: Ensure script is executable
+echo "• Ensuring orchestrator is executable..."
+sudo chmod +x "$BASE/hive_orchestrator.py"
 sudo chown -R infinity-x-one:infinity-x-one "$BASE"
 
-# Rewrite systemd service with absolute paths
-echo "Rewriting systemd service..."
+# Step 3: (Re)write systemd unit with absolute paths
+echo "• Rewriting systemd service..."
 sudo tee "$SERVICE_FILE" >/dev/null <<EOF
 [Unit]
 Description=Infinity Hive Orchestrator
@@ -38,40 +41,41 @@ User=infinity-x-one
 WantedBy=multi-user.target
 EOF
 
-# Ensure logs directory exists
-echo "Ensuring logs/ directory exists..."
+# Step 4: Make logs/ available
+echo "• Ensuring logs directory exists..."
 sudo mkdir -p "$BASE/logs"
 sudo chown infinity-x-one:infinity-x-one "$BASE/logs"
 
-# Reload systemd and restart service
-echo "Reloading systemd and restarting service..."
+# Step 5: Reload and restart orchestrator
+echo "• Reloading systemd & restarting service..."
 sudo systemctl daemon-reload
 sudo systemctl restart hive_orchestrator.service
 
-# Show current status
-echo -e "\nService status:"
+# Step 6: Display limited service status
+echo -e "\n• Service Status:"
 systemctl status hive_orchestrator.service --no-pager | head -n 10
 
-# Final human-friendly health check
-echo -e "\nPost-fix summary:"
+# Step 7: Summary diagnostics
+echo -e "\n• Project root listing:"
 ls -1 "$BASE"
-echo "Cron jobs installed:"
-crontab -l 2>/dev/null || echo "(none)"
+echo -e "\n• Cron jobs installed:"
+crontab -l 2>/dev/null || echo "  (none)"
 
-echo "Git remote:"
-cd "$BASE" && git remote -v
+echo -e "\n• Git remote configuration:"
+cd "$BASE"
+git remote -v
 
-# Supabase connectivity test
-echo -e "\nSupabase test:"
+echo -e "\n• Supabase connectivity check:"
 source "$BASE/venv/bin/activate"
 python3 - <<'PY'
-import os, sys
+import os
 try:
     from supabase import create_client
-    url, key = os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY")
-    if not url or not key:
-        print("  SUPABASE: URL or KEY missing.")
-        sys.exit(0)
+    url = os.getenv("SUPABASE_URL")
+    key = os.getenv("SUPABASE_KEY")
+    if not (url and key):
+        print("  ❗ SUPABASE_URL or SUPABASE_KEY not set")
+        exit(0)
     sb = create_client(url, key)
     res = sb.table("agent_logs").select(count="exact").execute()
     print(f"  agent_logs count: {res.count}")
@@ -79,6 +83,6 @@ except Exception as e:
     print(f"  Supabase error: {e}")
 PY
 
-# Pause so terminal remains open—it avoids the script closing the terminal immediately.
-echo -e "\nExecution complete. Press Enter to continue..."
-read -r
+# Final Step: Wait for any key — Terminal stays open
+read -n 1 -s -r -p $'\nExecution complete. Press any key to exit...\n'
+echo
