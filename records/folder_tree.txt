@@ -1,5 +1,15 @@
 .
 ├── $LOGFILE
+├── agents
+│   ├── executor
+│   │   └── run_executor.py
+│   ├── knowledge
+│   │   └── run_knowledge.py
+│   ├── planner
+│   │   └── run_planner.py
+│   ├── shadow
+│   └── verifier
+│       └── run_verifier.py
 ├── backend
 │   ├── agents
 │   │   ├── recall_agent.py
@@ -113,6 +123,7 @@
 │   ├── ignition_boot.log
 │   ├── intellabot.err
 │   ├── intellabot.log
+│   ├── prompt_installs.log
 │   ├── rclone_mount.log
 │   ├── rossetta.log
 │   └── strategygpt_loaded.log
@@ -120,7 +131,10 @@
 │   └── omega_schema_patch.sql
 ├── mtn_gpt_project -> /mnt/gpt-project
 ├── prompts
-│   └── rosetta_prompt.txt
+│   ├── rosetta_prompt.txt
+│   ├── shadow_agent_system.txt
+│   └── strategy
+│       └── strategy_gpt_system.txt
 ├── README.md
 ├── records
 │   ├── agent_diag.log
@@ -140,6 +154,9 @@
 │   ├── fix_systemd.sh
 │   ├── fix_systemd.sh.save
 │   ├── ignition_shadow.sh
+│   ├── install_infinity_manus_x.sh
+│   ├── install_manus_clone.sh
+│   ├── install_strategy_prompt.sh
 │   ├── nano_superprompt.sh
 │   ├── nl.sh
 │   ├── parallel_deploy.sh
@@ -149,4 +166,4 @@
     ├── project.json
     └── README.txt
 
-28 directories, 122 files
+35 directories, 132 files
