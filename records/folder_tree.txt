@@ -87,6 +87,8 @@
 │   ├── handshake_server_fallback.err
 │   ├── handshake_server_fallback.log
 │   ├── handshake_server.log
+│   ├── hive_orchestrator.err
+│   ├── hive_orchestrator.log
 │   └── rossetta.log
 ├── migrations
 │   └── omega_schema_patch.sql
@@ -115,4 +117,4 @@
     ├── push_to_github.sh
     └── system_diagnostic.sh
 
-22 directories, 94 files
+22 directories, 96 files
