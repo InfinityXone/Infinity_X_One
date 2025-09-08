@@ -81,10 +81,11 @@
 ├── README.md
 ├── records
 │   ├── folder_tree.txt
-│   └── nl_history.log
+│   ├── nl_history.log
+│   └── vercel_deploy.log
 └── scripts
     ├── deploy.sh
     ├── nl.sh
     └── push_to_github.sh
 
-19 directories, 69 files
+19 directories, 70 files
