@@ -26,3 +26,17 @@ Traceback (most recent call last):
   File "/opt/infinity_x_one/backend/supabase_utils.py", line 32, in get_client
     raise RuntimeError("SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set in the environment")
 RuntimeError: SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set in the environment
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/opt/infinity_x_one/backend/workers/faucet_worker.py", line 335, in <module>
+    run_worker()
+  File "/opt/infinity_x_one/backend/workers/faucet_worker.py", line 323, in run_worker
+    directives = fetch_pending_directives(AGENT_NAME)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/infinity_x_one/backend/supabase_utils.py", line 64, in fetch_pending_directives
+    client = get_client()
+             ^^^^^^^^^^^^
+  File "/opt/infinity_x_one/backend/supabase_utils.py", line 32, in get_client
+    raise RuntimeError("SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set in the environment")
+RuntimeError: SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set in the environment
