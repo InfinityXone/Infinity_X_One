@@ -84,7 +84,8 @@
 │   ├── handshake_server.err
 │   ├── handshake_server_fallback.err
 │   ├── handshake_server_fallback.log
-│   └── handshake_server.log
+│   ├── handshake_server.log
+│   └── rossetta.log
 ├── migrations
 │   └── omega_schema_patch.sql
 ├── prompts
@@ -99,4 +100,4 @@
     ├── nl.sh
     └── push_to_github.sh
 
-22 directories, 78 files
+22 directories, 79 files
