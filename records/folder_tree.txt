@@ -41,6 +41,7 @@
 ├── config
 │   └── agent_replicator.map.json
 ├── frontend
+│   ├── .gitignore
 │   ├── package.json
 │   ├── pages
 │   │   ├── agents.js
@@ -61,7 +62,10 @@
 │   │   └── service-worker.js
 │   ├── styles
 │   │   └── globals.css
-│   └── tailwind.config.js
+│   ├── tailwind.config.js
+│   └── .vercel
+│       ├── project.json
+│       └── README.txt
 ├── .github
 │   └── workflows
 │       └── auto-push.yml
@@ -95,4 +99,4 @@
     ├── nl.sh
     └── push_to_github.sh
 
-21 directories, 75 files
+22 directories, 78 files
