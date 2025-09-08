@@ -66,3 +66,10 @@ Error: Command "npm run build" exited with 1
 2025-09-08T04:57:39.066Z  
 2025-09-08T04:57:39.075Z  > Build failed because of webpack errors
 2025-09-08T04:57:39.120Z  Error: Command "npm run build" exited with 1
+Vercel CLI 47.0.5
+Retrieving project…
+Deploying infinityxone-team/frontend
+Inspect: https://vercel.com/infinityxone-team/frontend/H4VkLm1rfrJX478UpgPy87pgzXtC [3s]
+Production: https://frontend-ai8i4ovmz-infinityxone-team.vercel.app [3s]
+https://frontend-ai8i4ovmz-infinityxone-team.vercel.appQueued
+Building
