@@ -1,23 +1,36 @@
--- 🧠 RAG Memory Schema for Infinity X One
--- Ensure pgvector is enabled
+-- Enable pgvector extension
 create extension if not exists vector;
 
--- 🧬 Main Memory Table
+-- Core memory table
 create table if not exists rosetta_memory (
   id uuid primary key default gen_random_uuid(),
-  agent_id text not null,
-  user_input text,
-  gpt_response text,
-  embedding vector(1536),
-  timestamp timestamptz default now()
+  session_id text not null,
+  agent_name text not null,
+  user_query text,
+  ai_response text,
+  context jsonb,
+  created_at timestamp with time zone default timezone('utc', now())
 );
 
--- 📊 Query Logs for RAG Retrievals
-create table if not exists rag_query_logs (
+-- Vector embedding table
+create table if not exists vector_embeddings (
   id uuid primary key default gen_random_uuid(),
-  query_text text,
-  matching_chunks text[],
-  agent_id text,
-  triggered_by text,
-  timestamp timestamptz default now()
+  memory_id uuid references rosetta_memory(id) on delete cascade,
+  embedding vector(1536),
+  created_at timestamp with time zone default timezone('utc', now())
+);
+
+-- Index for similarity search
+create index if not exists idx_embedding_vector
+on vector_embeddings
+using ivfflat (embedding vector_cosine_ops)
+with (lists = 100);
+
+-- Optional context lookup table
+create table if not exists context_tags (
+  id uuid primary key default gen_random_uuid(),
+  memory_id uuid references rosetta_memory(id) on delete cascade,
+  tag text,
+  weight float default 1.0,
+  created_at timestamp with time zone default timezone('utc', now())
 );
