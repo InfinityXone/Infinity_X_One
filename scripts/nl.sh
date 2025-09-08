@@ -8,3 +8,7 @@ if [[ "$INPUT_LOWER" == *"gpt project"* || "$INPUT_LOWER" == *"gpt_projects"* ]]
 else
   echo "❓ Unknown instruction. Try referencing GPT Projects."
 fi
+  "push repo"*) cd /opt/infinity_x_one && git add . && git commit -m "⏱ Auto-sync $(date)" && git push origin main ;;
+  "deploy vercel"*) cd /opt/infinity_x_one && vercel --prod --yes ;;
+  "supabase db list"*) supabase db list ;;
+  "supabase db push"*) supabase db push ;;

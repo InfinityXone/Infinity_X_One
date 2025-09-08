@@ -74,6 +74,9 @@
 ├── .github
 │   └── workflows
 │       └── auto-push.yml
+├── .gitignore
+├── gpt-projects
+├── hive_orchestrator.py
 ├── infra
 ├── k8s
 │   ├── agent-deployment.yaml
@@ -85,14 +88,33 @@
 │   ├── namespace.yaml
 │   └── workers.yaml
 ├── logs
+│   ├── awakening.err.log
+│   ├── awakening.out.log
+│   ├── core_brain.err
+│   ├── core_brain.log
+│   ├── deploy_manager.err
+│   ├── deploy_manager.log
+│   ├── deploy_repos.err
+│   ├── deploy_repos.log
+│   ├── doctrine_loader.err
+│   ├── doctrine_loader.log
 │   ├── faucet.log
+│   ├── finsynapse_scraper.err
+│   ├── finsynapse_scraper.log
+│   ├── gateway.err
+│   ├── gateway.log
 │   ├── handshake_server.err
 │   ├── handshake_server_fallback.err
 │   ├── handshake_server_fallback.log
 │   ├── handshake_server.log
 │   ├── hive_orchestrator.err
 │   ├── hive_orchestrator.log
-│   └── rossetta.log
+│   ├── ignition_boot.log
+│   ├── intellabot.err
+│   ├── intellabot.log
+│   ├── rclone_mount.log
+│   ├── rossetta.log
+│   └── strategygpt_loaded.log
 ├── migrations
 │   └── omega_schema_patch.sql
 ├── prompts
@@ -109,15 +131,18 @@
 │   ├── system_diagnostic_2025-09-08_02-09-53.log
 │   ├── system_diagnostic_2025-09-08_02-10-55.log
 │   └── vercel_deploy.log
-└── scripts
-    ├── deploy.sh
-    ├── fix_and_deploy_vercel.sh
-    ├── fix_systemd.sh
-    ├── fix_systemd.sh.save
-    ├── nano_superprompt.sh
-    ├── nl.sh
-    ├── parallel_deploy.sh
-    ├── push_to_github.sh
-    └── system_diagnostic.sh
+├── scripts
+│   ├── deploy.sh
+│   ├── fix_and_deploy_vercel.sh
+│   ├── fix_systemd.sh
+│   ├── fix_systemd.sh.save
+│   ├── nano_superprompt.sh
+│   ├── nl.sh
+│   ├── parallel_deploy.sh
+│   ├── push_to_github.sh
+│   └── system_diagnostic.sh
+└── .vercel
+    ├── project.json
+    └── README.txt
 
-25 directories, 96 files
+27 directories, 119 files
