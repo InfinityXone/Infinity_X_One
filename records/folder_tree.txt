@@ -65,6 +65,7 @@
 ├── .github
 │   └── workflows
 │       └── auto-push.yml
+├── infra
 ├── k8s
 │   ├── agent-deployment.yaml
 │   ├── backend-service.yaml
@@ -74,6 +75,11 @@
 │   ├── ingress.yaml
 │   ├── namespace.yaml
 │   └── workers.yaml
+├── logs
+│   ├── handshake_server.err
+│   ├── handshake_server_fallback.err
+│   ├── handshake_server_fallback.log
+│   └── handshake_server.log
 ├── migrations
 │   └── omega_schema_patch.sql
 ├── prompts
@@ -88,4 +94,4 @@
     ├── nl.sh
     └── push_to_github.sh
 
-19 directories, 70 files
+21 directories, 74 files
