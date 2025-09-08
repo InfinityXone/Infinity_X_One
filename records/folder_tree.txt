@@ -40,6 +40,7 @@
 │       └── wallet_rotator.py
 ├── config
 │   └── agent_replicator.map.json
+├── .env
 ├── factory
 │   ├── staging
 │   └── templates
@@ -117,6 +118,7 @@
 │   └── strategygpt_loaded.log
 ├── migrations
 │   └── omega_schema_patch.sql
+├── mtn_gpt_project -> /mnt/gpt-project
 ├── prompts
 │   └── rosetta_prompt.txt
 ├── README.md
@@ -133,9 +135,11 @@
 │   └── vercel_deploy.log
 ├── scripts
 │   ├── deploy.sh
+│   ├── env_loader.sh
 │   ├── fix_and_deploy_vercel.sh
 │   ├── fix_systemd.sh
 │   ├── fix_systemd.sh.save
+│   ├── ignition_shadow.sh
 │   ├── nano_superprompt.sh
 │   ├── nl.sh
 │   ├── parallel_deploy.sh
@@ -145,4 +149,4 @@
     ├── project.json
     └── README.txt
 
-27 directories, 119 files
+28 directories, 122 files
