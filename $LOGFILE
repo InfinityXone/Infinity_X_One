@@ -1,0 +1,3 @@
+$(date -u) | USER -> $QUERY
+$(date -u) | USER -> $QUERY
+$(date -u) | USER -> $QUERY
