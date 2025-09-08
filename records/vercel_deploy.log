@@ -1,3 +1,68 @@
 Vercel CLI 47.0.5
 ? Set up and deploy “/opt/infinity_x_one/frontend”? (Y/n)[59G
 [?25h
+Vercel CLI 47.0.5
+Retrieving project…
+Deploying infinityxone-team/frontend
+Uploading [--------------------] (0.0B/227.5KB)
+Uploading [=====---------------] (59.2KB/227.5KB)
+Uploading [==========----------] (119.0KB/227.5KB)
+Uploading [================----] (183.0KB/227.5KB)
+Uploading [====================] (227.5KB/227.5KB)
+Inspect: https://vercel.com/infinityxone-team/frontend/Hg2A6ztghQGAHbP59db2UjojzMp6 [3s]
+Production: https://frontend-j13g5peq5-infinityxone-team.vercel.app [3s]
+https://frontend-j13g5peq5-infinityxone-team.vercel.appQueued
+Building
+Error: Command "npm run build" exited with 1
+
+2025-09-08T04:57:19.132Z  Running build in Washington, D.C., USA (East) – iad1
+2025-09-08T04:57:19.134Z  Build machine configuration: 2 cores, 8 GB
+2025-09-08T04:57:19.166Z  Retrieving list of deployment files...
+2025-09-08T04:57:19.270Z  Previous build caches not available
+2025-09-08T04:57:19.683Z  Downloading 17 deployment files...
+2025-09-08T04:57:20.117Z  Running "vercel build"
+2025-09-08T04:57:20.575Z  Vercel CLI 47.0.5
+2025-09-08T04:57:21.297Z  Installing dependencies...
+2025-09-08T04:57:36.564Z  
+2025-09-08T04:57:36.564Z  added 154 packages in 15s
+2025-09-08T04:57:36.565Z  
+2025-09-08T04:57:36.565Z  35 packages are looking for funding
+2025-09-08T04:57:36.565Z    run `npm fund` for details
+2025-09-08T04:57:36.617Z  Detected Next.js version: 13.5.11
+2025-09-08T04:57:36.620Z  Running "npm run build"
+2025-09-08T04:57:36.733Z  
+2025-09-08T04:57:36.735Z  > infinity-x-one-cockpit@0.1.0 build
+2025-09-08T04:57:36.736Z  > next build
+2025-09-08T04:57:36.736Z  
+2025-09-08T04:57:37.296Z  Attention: Next.js now collects completely anonymous telemetry regarding usage.
+2025-09-08T04:57:37.297Z  This information is used to shape Next.js' roadmap and prioritize features.
+2025-09-08T04:57:37.297Z  You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+2025-09-08T04:57:37.297Z  https://nextjs.org/telemetry
+2025-09-08T04:57:37.297Z  
+2025-09-08T04:57:37.369Z     Linting and checking validity of types ...
+2025-09-08T04:57:37.583Z     Creating an optimized production build ...
+2025-09-08T04:57:39.061Z  Failed to compile.
+2025-09-08T04:57:39.061Z  
+2025-09-08T04:57:39.062Z  ./pages/agents.js
+2025-09-08T04:57:39.062Z  Error: 
+2025-09-08T04:57:39.062Z    [31mx[0m Expected ',', got '{'
+2025-09-08T04:57:39.062Z       ,-[[36;1;4m/vercel/path0/pages/agents.js[0m:113:1]
+2025-09-08T04:57:39.062Z   [2m113[0m |           </div>
+2025-09-08T04:57:39.063Z   [2m114[0m |         </div>
+2025-09-08T04:57:39.063Z   [2m115[0m | 
+2025-09-08T04:57:39.063Z   [2m116[0m |         {/* System service status */}
+2025-09-08T04:57:39.063Z       : [31;1m        ^[0m
+2025-09-08T04:57:39.063Z   [2m117[0m |         <div className="border border-gray-700 rounded-lg p-4">
+2025-09-08T04:57:39.063Z   [2m118[0m |           <h2 className="text-lg font-semibold text-primary-lime">System Services</h2>
+2025-09-08T04:57:39.064Z   [2m119[0m |           <p className="text-sm">Resource Allocator: <span className="text-primary-lime">Active</span></p>
+2025-09-08T04:57:39.064Z       `----
+2025-09-08T04:57:39.064Z  
+2025-09-08T04:57:39.064Z  Caused by:
+2025-09-08T04:57:39.064Z      Syntax Error
+2025-09-08T04:57:39.064Z  
+2025-09-08T04:57:39.064Z  Import trace for requested module:
+2025-09-08T04:57:39.065Z  ./pages/agents.js
+2025-09-08T04:57:39.065Z  
+2025-09-08T04:57:39.066Z  
+2025-09-08T04:57:39.075Z  > Build failed because of webpack errors
+2025-09-08T04:57:39.120Z  Error: Command "npm run build" exited with 1
