@@ -76,6 +76,7 @@
 │   ├── namespace.yaml
 │   └── workers.yaml
 ├── logs
+│   ├── faucet.log
 │   ├── handshake_server.err
 │   ├── handshake_server_fallback.err
 │   ├── handshake_server_fallback.log
@@ -94,4 +95,4 @@
     ├── nl.sh
     └── push_to_github.sh
 
-21 directories, 74 files
+21 directories, 75 files
