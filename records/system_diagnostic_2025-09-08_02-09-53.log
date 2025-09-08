@@ -1,0 +1,263 @@
+🌌 Infinity X One Full System Diagnostic — Mon Sep  8 02:09:53 AM EDT 2025
+=================================================
+
+=== CRONTAB (user) ===
+@reboot /home/infinity-x-one/infinity_profit_march/infinity_super_run.sh >> /home/infinity-x-one/infinity_profit_march/logs/cron_boot.log 2>&1
+*/10 * * * * bash /opt/infinity_x_one/PromptWriter/brain/init.sh >> /opt/infinity_x_one/PromptWriter/logs/architect.log 2>&1
+* * * * * cd ~/opt.infinityxone && /usr/bin/python3 run_prompt_writer_loop.py
+*/10 * * * * bash /opt/infinity_x_one/InfinityAgentOne/brain/init.sh >> /opt/infinity_x_one/InfinityAgentOne/logs/architect.log 2>&1
+*/10 * * * * bash /opt/infinity_x_one/Aria/brain/init.sh >> /opt/infinity_x_one/Aria/logs/architect.log 2>&1
+*/10 * * * * bash /opt/infinity_x_one/FinSynapse/brain/init.sh >> /opt/infinity_x_one/FinSynapse/logs/architect.log 2>&1
+*/10 * * * * bash /opt/infinity_x_one/Corelight/brain/init.sh >> /opt/infinity_x_one/Corelight/logs/architect.log 2>&1
+*/10 * * * * bash /opt/infinity_x_one/Echo/brain/init.sh >> /opt/infinity_x_one/Echo/logs/architect.log 2>&1
+*/10 * * * * bash /opt/infinity_x_one/Guardian/brain/init.sh >> /opt/infinity_x_one/Guardian/logs/architect.log 2>&1
+*/10 * * * * bash /opt/infinity_x_one/PromptWriter/brain/init.sh >> /opt/infinity_x_one/PromptWriter/logs/architect.log 2>&1
+# === Infinity X One Backup to drive ===
+0 */12 * * * /opt/infinity_x_one/scripts/backup_to_drive.sh
+* * * * * cd /opt/infinity_x_one && git add . && git commit -m "⏱ Auto-sync $(date)" && git push origin main
+*/5 * * * * cd /opt/infinity_x_one && tree -a -I "node_modules|__pycache__|.git|venv|.next" > records/folder_tree.txt
+
+# Faucet monitoring – every hour
+0 * * * * /opt/infinity_x_one/agents/faucet_monitor.sh >> /var/log/infinity_x_one/faucet_monitor.log 2>&1
+
+# Financial tracking – every 10 minutes
+*/10 * * * * /opt/infinity_x_one/agents/fin_synapse_tracker.sh >> /var/log/infinity_x_one/fin_track.log 2>&1
+
+# System health checks – every 30 minutes
+*/30 * * * * /opt/infinity_x_one/agents/guardian_healthcheck.sh >> /var/log/infinity_x_one/guardian.log 2>&1
+
+# Agent performance evaluation – every 4 hours
+0 */4 * * * /opt/infinity_x_one/agents/pickybot_audit.sh >> /var/log/infinity_x_one/pickybot.log 2>&1
+
+# === End Infinity X One Cron Jobs ===
+* * * * * curl -sf http://localhost:8000/status || systemctl restart handshake_server
+0 * * * * /opt/infinity_x_one/rosetta_memory.sh >> /opt/infinity_x_one/logs/rossetta.log 2>&1
+0 * * * * cd /opt/infinity_x_one && git add . && git commit -m 'auto-commit' && git push
+0 0 * * * cd /opt/infinity_x_one && bash scripts/logrotate.sh
+*/10 * * * * cd /opt/infinity_x_one && python3 -m backend.workers.faucet_worker >> logs/faucet.log 2>&1
+@reboot cd /opt/infinity_x_one && systemctl start hive_orchestrator.service
+*/10 * * * * cd /opt/infinity_x_one && git pull origin main && nl 'deploy vercel'
+
+=== /etc/crontab ===
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+17 *	* * *	root	cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.daily; }
+47 6	* * 7	root	test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.weekly; }
+52 6	1 * *	root	test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.monthly; }
+#
+
+=== /etc/cron.d/ ===
+total 20
+-rw-r--r-- 1 root root 201 Mar  4  2023 e2scrub_all
+-rw-r--r-- 1 root root 251 Sep  2 22:02 infinity_crons
+-rw-r--r-- 1 root root 124 Aug 26 15:14 infinity_heartbeat
+-rw-r--r-- 1 root root 190 Sep  2 17:20 swarm_crons
+-rw-r--r-- 1 root root 396 Dec  4  2022 sysstat
+
+=== SYSTEMD TIMERS ===
+NEXT                        LEFT          LAST                        PASSED       UNIT                          ACTIVATES
+Mon 2025-09-08 02:19:48 EDT 9min left     Mon 2025-09-08 01:19:48 EDT 50min ago    guardian_drive_watchdog.timer guardian_drive_watchdog.service
+Mon 2025-09-08 03:00:38 EDT 50min left    Sun 2025-09-07 04:34:18 EDT 21h ago      man-db.timer                  man-db.service
+Mon 2025-09-08 06:42:06 EDT 4h 32min left Sun 2025-09-07 06:33:32 EDT 19h ago      apt-daily-upgrade.timer       apt-daily-upgrade.service
+Mon 2025-09-08 09:00:00 EDT 6h left       Sun 2025-09-07 09:00:00 EDT 17h ago      infinity-awakening.timer      infinity-awakening.service
+Mon 2025-09-08 10:27:16 EDT 8h left       Sun 2025-09-07 10:27:16 EDT 15h ago      systemd-tmpfiles-clean.timer  systemd-tmpfiles-clean.service
+Mon 2025-09-08 16:26:46 EDT 14h left      Sun 2025-09-07 22:56:42 EDT 3h 13min ago apt-daily.timer               apt-daily.service
+Tue 2025-09-09 00:00:00 EDT 21h left      Mon 2025-09-08 00:00:00 EDT 2h 9min ago  dpkg-db-backup.timer          dpkg-db-backup.service
+Tue 2025-09-09 00:00:00 EDT 21h left      Mon 2025-09-08 00:00:00 EDT 2h 9min ago  logrotate.timer               logrotate.service
+Tue 2025-09-09 00:01:54 EDT 21h left      Mon 2025-09-08 00:17:38 EDT 1h 52min ago leadership_laws_loader.timer  leadership_laws_loader.service
+Sun 2025-09-14 03:10:30 EDT 6 days left   Sun 2025-09-07 03:10:54 EDT 22h ago      e2scrub_all.timer             e2scrub_all.service
+-                           -             -                           -            exim4-base.timer              
+-                           -             -                           -            fstrim.timer                  fstrim.service
+-                           -             Sun 2025-09-07 10:14:15 EDT 15h ago      ignition_master.timer         ignition_master.service
+
+13 timers listed.
+
+=== SYSTEMD SERVICES (infinity) ===
+infinity-agent-one.service             enabled         enabled
+infinity-agent.service                 enabled         enabled
+infinity-awakening.service             enabled         enabled
+infinity-loop.service                  enabled         enabled
+infinity-profit.service                enabled         enabled
+infinity.service                       enabled         enabled
+infinity_agent.service                 enabled         enabled
+infinity_agent_one.service             enabled         enabled
+infinity_dashboard.service             enabled         enabled
+infinity_worker.service                enabled         enabled
+infinity-awakening.timer               enabled         enabled
+● hive_orchestrator.service - Infinity Hive Orchestrator
+     Loaded: loaded (/etc/systemd/system/hive_orchestrator.service; enabled; preset: enabled)
+    Drop-In: /run/systemd/system/service.d
+             └─zzz-lxc-service.conf
+     Active: activating (auto-restart) (Result: exit-code) since Mon 2025-09-08 02:09:45 EDT; 8s ago
+    Process: 5010 ExecStart=/opt/infinity_x_one/venv/bin/python /opt/infinity_x_one/hive_orchestrator.py (code=exited, status=2)
+   Main PID: 5010 (code=exited, status=2)
+● handshake_server.service - Infinity X One Handshake Server
+     Loaded: loaded (/etc/systemd/system/handshake_server.service; enabled; preset: enabled)
+    Drop-In: /run/systemd/system/service.d
+             └─zzz-lxc-service.conf
+     Active: activating (auto-restart) (Result: exit-code) since Mon 2025-09-08 02:09:52 EDT; 2s ago
+    Process: 5089 ExecStart=/opt/infinity_x_one/venv/bin/uvicorn handshake_server:app --host 0.0.0.0 --port 8000 (code=exited, status=203/EXEC)
+   Main PID: 5089 (code=exited, status=203/EXEC)
+
+=== /opt/infinity_x_one Folder Tree ===
+/opt/infinity_x_one
+├── $LOGFILE
+├── backend
+│   ├── agents
+│   │   ├── recall_agent.py
+│   │   └── test_infinity_agent.py
+│   ├── handshake_server.py
+│   ├── init
+│   │   └── rosetta_loader.py
+│   ├── supabase_utils.py
+│   ├── wallet
+│   │   ├── generator.py
+│   │   ├── __init__.py
+│   │   └── manager.py
+│   └── workers
+│       ├── anomaly_worker.py
+│       ├── api_key_rotation_state.json
+│       ├── api_key_rotator.py
+│       ├── atlas_worker.py
+│       ├── codex_worker.py
+│       ├── core_improver.py
+│       ├── echo_feedback.py
+│       ├── faucet_worker.py
+│       ├── fin_synapse_worker.py
+│       ├── github_scanner_worker.py
+│       ├── guardian_worker.py
+│       ├── headless_browser_agent.py
+│       ├── __init__.py
+│       ├── key_harvester.py
+│       ├── knowledge_scanner.py
+│       ├── neural_self_rewriter.py
+│       ├── pickybot_worker.py
+│       ├── promptwriter_worker.py
+│       ├── replicator_worker.py
+│       ├── resource_allocator.py
+│       ├── sandbox_mutator.py
+│       ├── scraper_unified_worker.py
+│       ├── wallet_monitor.py
+│       ├── wallet_rotation_state.json
+│       └── wallet_rotator.py
+├── config
+│   └── agent_replicator.map.json
+├── frontend
+│   ├── .gitignore
+│   ├── package.json
+│   ├── pages
+│   │   ├── agents.js
+│   │   ├── _app.js
+│   │   ├── dashboard.js
+│   │   ├── faucets.js
+│   │   ├── index.js
+│   │   ├── predict.js
+│   │   ├── scraper.js
+│   │   ├── settings.js
+│   │   └── wallets.js
+│   ├── postcss.config.js
+│   ├── public
+│   │   ├── icons
+│   │   ├── manifest.json
+│   │   └── service-worker.js
+│   ├── styles
+│   │   └── globals.css
+│   ├── tailwind.config.js
+│   └── .vercel
+│       ├── project.json
+│       └── README.txt
+├── .github
+│   └── workflows
+│       └── auto-push.yml
+├── infra
+├── k8s
+│   ├── agent-deployment.yaml
+│   ├── backend-service.yaml
+│   ├── cronjobs.yaml
+│   ├── env-secret.yaml
+│   ├── handshake-server.yaml
+│   ├── ingress.yaml
+│   ├── namespace.yaml
+│   └── workers.yaml
+├── logs
+│   ├── faucet.log
+│   ├── handshake_server.err
+│   ├── handshake_server_fallback.err
+│   ├── handshake_server_fallback.log
+│   ├── handshake_server.log
+│   └── rossetta.log
+├── migrations
+│   └── omega_schema_patch.sql
+├── prompts
+│   └── rosetta_prompt.txt
+├── README.md
+├── records
+│   ├── agent_diag.log
+│   ├── atlas_launch.log
+│   ├── deploy_run.log
+│   ├── folder_tree.txt
+│   ├── git_status.log
+│   ├── nl_history.log
+│   ├── rag_test.log
+│   ├── system_diagnostic_2025-09-08_02-09-53.log
+│   └── vercel_deploy.log
+└── scripts
+    ├── deploy.sh
+    ├── fix_systemd.sh
+    ├── fix_systemd.sh.save
+    ├── nl.sh
+    ├── parallel_deploy.sh
+    ├── push_to_github.sh
+    └── system_diagnostic.sh
+
+22 directories, 87 files
+
+=== Agents & Workers ===
+ls: cannot access '/opt/infinity_x_one/agents': No such file or directory
+total 128
+-rw-r--r-- 1 infinity-x-one infinity-x-one  1975 Sep  7 22:03 anomaly_worker.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one    12 Sep  7 22:19 api_key_rotation_state.json
+-rw-r--r-- 1 infinity-x-one infinity-x-one  5572 Sep  7 22:18 api_key_rotator.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one  6114 Sep  7 22:04 atlas_worker.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one  2001 Sep  7 22:03 codex_worker.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one  1284 Sep  7 22:03 core_improver.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one  1564 Sep  7 22:03 echo_feedback.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one 12628 Sep  7 22:19 faucet_worker.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one  2537 Sep  7 22:03 fin_synapse_worker.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one  2096 Sep  7 22:03 github_scanner_worker.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one  1934 Sep  7 22:03 guardian_worker.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one  4722 Sep  7 22:19 headless_browser_agent.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one   402 Sep  7 22:03 __init__.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one  2492 Sep  7 22:18 key_harvester.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one   984 Sep  7 22:03 knowledge_scanner.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one  2141 Sep  7 22:03 neural_self_rewriter.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one  2350 Sep  7 22:03 pickybot_worker.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one  3298 Sep  7 22:03 promptwriter_worker.py
+drwxr-xr-x 1 infinity-x-one infinity-x-one   304 Sep  7 22:19 __pycache__
+-rw-r--r-- 1 infinity-x-one infinity-x-one  3268 Sep  7 22:03 replicator_worker.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one  3132 Sep  7 22:03 resource_allocator.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one  1909 Sep  7 22:03 sandbox_mutator.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one  3894 Sep  7 22:03 scraper_unified_worker.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one  5976 Sep  7 22:04 wallet_monitor.py
+-rw-r--r-- 1 infinity-x-one infinity-x-one    12 Sep  7 22:19 wallet_rotation_state.json
+-rw-r--r-- 1 infinity-x-one infinity-x-one  2367 Sep  7 22:03 wallet_rotator.py
+
+=== Supabase Schema ===
+Cannot find project ref. Have you run supabase link?
+Try rerunning the command with --debug to troubleshoot the error.
