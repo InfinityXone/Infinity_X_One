@@ -5,6 +5,8 @@
 │   │   └── run_executor.py
 │   ├── knowledge
 │   │   └── run_knowledge.py
+│   ├── mesh
+│   │   └── mesh_node.py
 │   ├── planner
 │   │   └── run_planner.py
 │   ├── shadow
@@ -51,6 +53,8 @@
 ├── config
 │   └── agent_replicator.map.json
 ├── .env
+├── event_bus
+│   └── start_kafka.sh
 ├── factory
 │   ├── staging
 │   └── templates
@@ -127,6 +131,8 @@
 │   ├── rclone_mount.log
 │   ├── rossetta.log
 │   └── strategygpt_loaded.log
+├── mcp_tools
+│   └── register_tools.py
 ├── migrations
 │   └── omega_schema_patch.sql
 ├── mtn_gpt_project -> /mnt/gpt-project
@@ -154,6 +160,7 @@
 │   ├── fix_systemd.sh
 │   ├── fix_systemd.sh.save
 │   ├── ignition_shadow.sh
+│   ├── install_infinity_manus_x_pro.sh
 │   ├── install_infinity_manus_x.sh
 │   ├── install_manus_clone.sh
 │   ├── install_strategy_prompt.sh
@@ -166,4 +173,4 @@
     ├── project.json
     └── README.txt
 
-35 directories, 132 files
+38 directories, 136 files
