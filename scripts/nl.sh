@@ -122,3 +122,9 @@ case "$QUERY" in
     echo "$(date -u) | SYSTEM -> No mapping for: $QUERY" >> $LOGFILE
     ;;
 esac
+
+  *"create RAG schema"*)
+    cd /opt/infinity_x_one/supabase
+    supabase db query < create_rag_schema.sql
+    ;;
+
