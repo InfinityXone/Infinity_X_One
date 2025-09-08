@@ -1,0 +1,90 @@
+.
+├── $LOGFILE
+├── backend
+│   ├── agents
+│   │   ├── recall_agent.py
+│   │   └── test_infinity_agent.py
+│   ├── handshake_server.py
+│   ├── init
+│   │   └── rosetta_loader.py
+│   ├── supabase_utils.py
+│   ├── wallet
+│   │   ├── generator.py
+│   │   ├── __init__.py
+│   │   └── manager.py
+│   └── workers
+│       ├── anomaly_worker.py
+│       ├── api_key_rotation_state.json
+│       ├── api_key_rotator.py
+│       ├── atlas_worker.py
+│       ├── codex_worker.py
+│       ├── core_improver.py
+│       ├── echo_feedback.py
+│       ├── faucet_worker.py
+│       ├── fin_synapse_worker.py
+│       ├── github_scanner_worker.py
+│       ├── guardian_worker.py
+│       ├── headless_browser_agent.py
+│       ├── __init__.py
+│       ├── key_harvester.py
+│       ├── knowledge_scanner.py
+│       ├── neural_self_rewriter.py
+│       ├── pickybot_worker.py
+│       ├── promptwriter_worker.py
+│       ├── replicator_worker.py
+│       ├── resource_allocator.py
+│       ├── sandbox_mutator.py
+│       ├── scraper_unified_worker.py
+│       ├── wallet_monitor.py
+│       ├── wallet_rotation_state.json
+│       └── wallet_rotator.py
+├── config
+│   └── agent_replicator.map.json
+├── frontend
+│   ├── package.json
+│   ├── pages
+│   │   ├── agents.js
+│   │   ├── _app.js
+│   │   ├── dashboard.js
+│   │   ├── faucets.js
+│   │   ├── index.js
+│   │   ├── predict.js
+│   │   ├── scraper.js
+│   │   ├── settings.js
+│   │   └── wallets.js
+│   ├── postcss.config.js
+│   ├── public
+│   │   ├── icons
+│   │   │   ├── icon-192x192.png
+│   │   │   └── icon-512x512.png
+│   │   ├── manifest.json
+│   │   └── service-worker.js
+│   ├── styles
+│   │   └── globals.css
+│   └── tailwind.config.js
+├── .github
+│   └── workflows
+│       └── auto-push.yml
+├── k8s
+│   ├── agent-deployment.yaml
+│   ├── backend-service.yaml
+│   ├── cronjobs.yaml
+│   ├── env-secret.yaml
+│   ├── handshake-server.yaml
+│   ├── ingress.yaml
+│   ├── namespace.yaml
+│   └── workers.yaml
+├── migrations
+│   └── omega_schema_patch.sql
+├── prompts
+│   └── rosetta_prompt.txt
+├── README.md
+├── records
+│   ├── folder_tree.txt
+│   └── nl_history.log
+└── scripts
+    ├── deploy.sh
+    ├── nl.sh
+    └── push_to_github.sh
+
+19 directories, 69 files
