@@ -40,6 +40,9 @@
 │       └── wallet_rotator.py
 ├── config
 │   └── agent_replicator.map.json
+├── factory
+│   ├── staging
+│   └── templates
 ├── frontend
 │   ├── .gitignore
 │   ├── package.json
@@ -117,4 +120,4 @@
     ├── push_to_github.sh
     └── system_diagnostic.sh
 
-22 directories, 96 files
+25 directories, 96 files
