@@ -109,9 +109,10 @@
     ├── fix_and_deploy_vercel.sh
     ├── fix_systemd.sh
     ├── fix_systemd.sh.save
+    ├── nano_superprompt.sh
     ├── nl.sh
     ├── parallel_deploy.sh
     ├── push_to_github.sh
     └── system_diagnostic.sh
 
-22 directories, 93 files
+22 directories, 94 files
