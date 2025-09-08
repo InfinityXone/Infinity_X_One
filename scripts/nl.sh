@@ -1,7 +1,6 @@
 #!/bin/bash
 # ========================================
 # NL.sh – Natural Language Cockpit for Infinity X One
-# Controls: local, remote, mobile, Infinity systems
 # ========================================
 
 QUERY="$*"
@@ -11,6 +10,7 @@ echo "🧠 [NL.sh] Received request: $QUERY"
 echo "$(date -u) | USER -> $QUERY" >> $LOGFILE
 
 case "$QUERY" in
+
   # ==== LOCAL DESKTOP OPS ====
   *"list desktop"*|*"desktop files"*)
     ls -lh ~/Desktop
@@ -62,7 +62,13 @@ case "$QUERY" in
     ;;
 
   *"supabase logs"*)
+    cd /opt/infinity_x_one/supabase
     supabase logs
+    ;;
+
+  *"create RAG schema"*)
+    cd /opt/infinity_x_one/supabase
+    supabase db query < create_rag_schema.sql
     ;;
 
   # ==== INFINITY SYSTEM OPS ====
@@ -92,7 +98,7 @@ case "$QUERY" in
     tail -n 50 /opt/infinity_x_one/records/agent_logs.json
     ;;
 
-  # ==== REMOTE MOBILE BRIDGE ====
+  # ==== REMOTE / MOBILE ====
   *"send to mobile "*)
     MSG=$(echo "$QUERY" | cut -d' ' -f3-)
     echo "📱 $MSG" >> /opt/infinity_x_one/records/mobile_bridge.log
@@ -118,13 +124,8 @@ case "$QUERY" in
 
   # ==== DEFAULT ====
   *)
-    echo "⚠️ No mapping for: $QUERY"
+    echo "⚠️ NL.sh: No mapping for: $QUERY"
     echo "$(date -u) | SYSTEM -> No mapping for: $QUERY" >> $LOGFILE
     ;;
+
 esac
-
-  *"create RAG schema"*)
-    cd /opt/infinity_x_one/supabase
-    supabase db query < create_rag_schema.sql
-    ;;
-
