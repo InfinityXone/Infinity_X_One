@@ -2,9 +2,6 @@
 # 🌌 Infinity X One — Nano Super Prompt Daemon
 # Auto-reads new GPT projects → builds → wraps → pushes → deploys
 
-INPUT="Auto Trigger via GPT drop"
-INPUT_LOWER=$(echo "$INPUT" | tr '[:upper:]' '[:lower:]')
-
 DROPZONE="/mnt/gpt_projects"
 FACTORY="/opt/infinity_x_one/factory"
 TEMPLATES="$FACTORY/templates"
@@ -31,7 +28,7 @@ for SYS in "$DROPZONE"/*; do
     rsync -av "$TEMPLATES"/ "$DEST"/
     cp "$GLOBAL_ENV" "$DEST/.env"
 
-    # README
+    # Create README
     cat <<'EOF' > "$DEST/README.md"
 # Infinity X One Auto-Built Project
 
