@@ -97,7 +97,9 @@
 │   └── vercel_deploy.log
 └── scripts
     ├── deploy.sh
+    ├── fix_systemd.sh
+    ├── .fix_systemd.sh.swp
     ├── nl.sh
     └── push_to_github.sh
 
-22 directories, 79 files
+22 directories, 81 files
