@@ -1,0 +1,21 @@
+{
+  "name": "infinity_ai_swarm",
+  "version": 2,
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+  "github": {
+    "enabled": true,
+    "repo": "InfinityXone/Infinity_X_One",
+    "branch": "main"
+  }
+}
