@@ -1,0 +1,122 @@
+/mnt/gpt-projects/Infinity_X_One
+├── $LOGFILE
+├── agents
+│   ├── executor
+│   ├── knowledge
+│   ├── mesh
+│   ├── planner
+│   └── verifier
+├── backend
+│   ├── agents
+│   ├── handshake_server.py
+│   ├── init
+│   ├── __pycache__
+│   ├── supabase_utils.py
+│   ├── wallet
+│   └── workers
+├── config
+│   └── agent_replicator.map.json
+├── docs
+├── event_bus
+│   └── start_kafka.sh
+├── frontend
+│   ├── package.json
+│   ├── pages
+│   ├── postcss.config.js
+│   ├── public
+│   ├── styles
+│   ├── tailwind.config.js
+│   ├── vercel_backup_1757317966.json
+│   └── vercel.json
+├── hive_orchestrator.py
+├── k8s
+│   ├── agent-deployment.yaml
+│   ├── backend-service.yaml
+│   ├── cronjobs.yaml
+│   ├── env-secret.yaml
+│   ├── handshake-server.yaml
+│   ├── ingress.yaml
+│   ├── namespace.yaml
+│   └── workers.yaml
+├── logs
+│   ├── awakening.err.log
+│   ├── awakening.out.log
+│   ├── core_brain.err
+│   ├── core_brain.log
+│   ├── deploy_manager.err
+│   ├── deploy_manager.log
+│   ├── deploy_repos.err
+│   ├── deploy_repos.log
+│   ├── doctrine_loader.err
+│   ├── doctrine_loader.log
+│   ├── faucet.log
+│   ├── finsynapse_scraper.err
+│   ├── finsynapse_scraper.log
+│   ├── gateway.err
+│   ├── gateway.log
+│   ├── handshake_server.err
+│   ├── handshake_server_fallback.err
+│   ├── handshake_server_fallback.log
+│   ├── handshake_server.log
+│   ├── hive_orchestrator.err
+│   ├── hive_orchestrator.log
+│   ├── ignition_boot.log
+│   ├── intellabot.err
+│   ├── intellabot.log
+│   ├── prompt_installs.log
+│   ├── rclone_mount.log
+│   ├── rossetta.log
+│   └── strategygpt_loaded.log
+├── manifests
+├── mcp_tools
+│   └── register_tools.py
+├── migrations
+│   └── omega_schema_patch.sql
+├── mtn_gpt_project -> /mnt/gpt-project
+├── prompts
+│   ├── rosetta_prompt.txt
+│   ├── shadow_agent_system.txt
+│   └── strategy
+├── README.md
+├── records
+│   ├── agent_diag.log
+│   ├── atlas_launch.log
+│   ├── deploy_run.log
+│   ├── folder_tree.txt
+│   ├── git_status.log
+│   ├── nl_history.log
+│   ├── rag_test.log
+│   ├── system_diagnostic_2025-09-08_02-09-53.log
+│   ├── system_diagnostic_2025-09-08_02-10-55.log
+│   └── vercel_deploy.log
+├── scripts
+│   ├── cli_check.sh
+│   ├── deploy.sh
+│   ├── env_loader.sh
+│   ├── fix_and_deploy_vercel.sh
+│   ├── fix_systemd.sh
+│   ├── fix_systemd.sh.save
+│   ├── ignite.sh
+│   ├── ignition_shadow.sh
+│   ├── install_infinity_manus_x_pro.sh
+│   ├── install_infinity_manus_x.sh
+│   ├── install_manus_clone.sh
+│   ├── install_strategy_prompt.sh
+│   ├── nano_superprompt.sh
+│   ├── nl.sh
+│   ├── parallel_deploy.sh
+│   ├── push_to_github.sh
+│   ├── system_diagnostic.sh
+│   └── test_mnt_push.sh
+├── services
+│   └── orchestrator
+├── supabase
+├── tracked_files.txt
+├── tree_structure.txt
+└── venv
+    ├── bin
+    ├── lib
+    ├── lib64 -> lib
+    └── pyvenv.cfg
+
+37 directories, 83 files
