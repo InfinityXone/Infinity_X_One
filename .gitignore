@@ -1,7 +1,27 @@
+# Python
 venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
 logs/
 *.log
 *.err
 *.bak
-__pycache__/
+
+# Env
 .env
+
+# Node/Vercel
+node_modules/
+.vercel
+dist/
+.next/
+out/
+
+# OS/Editor junk
+.DS_Store
+*.swp
+

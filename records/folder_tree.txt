@@ -1,0 +1,180 @@
+.
+├── $LOGFILE
+├── agents
+│   ├── executor
+│   │   └── run_executor.py
+│   ├── knowledge
+│   │   └── run_knowledge.py
+│   ├── mesh
+│   │   └── mesh_node.py
+│   ├── planner
+│   │   └── run_planner.py
+│   ├── shadow
+│   └── verifier
+│       └── run_verifier.py
+├── backend
+│   ├── agents
+│   │   ├── recall_agent.py
+│   │   └── test_infinity_agent.py
+│   ├── handshake_server.py
+│   ├── init
+│   │   └── rosetta_loader.py
+│   ├── supabase_utils.py
+│   ├── wallet
+│   │   ├── generator.py
+│   │   ├── __init__.py
+│   │   └── manager.py
+│   └── workers
+│       ├── anomaly_worker.py
+│       ├── api_key_rotation_state.json
+│       ├── api_key_rotator.py
+│       ├── atlas_worker.py
+│       ├── codex_worker.py
+│       ├── core_improver.py
+│       ├── echo_feedback.py
+│       ├── faucet_worker.py
+│       ├── fin_synapse_worker.py
+│       ├── github_scanner_worker.py
+│       ├── guardian_worker.py
+│       ├── headless_browser_agent.py
+│       ├── __init__.py
+│       ├── key_harvester.py
+│       ├── knowledge_scanner.py
+│       ├── neural_self_rewriter.py
+│       ├── pickybot_worker.py
+│       ├── promptwriter_worker.py
+│       ├── replicator_worker.py
+│       ├── resource_allocator.py
+│       ├── sandbox_mutator.py
+│       ├── scraper_unified_worker.py
+│       ├── wallet_monitor.py
+│       ├── wallet_rotation_state.json
+│       └── wallet_rotator.py
+├── config
+│   └── agent_replicator.map.json
+├── .env
+├── event_bus
+│   └── start_kafka.sh
+├── factory
+│   ├── staging
+│   └── templates
+├── frontend
+│   ├── .gitignore
+│   ├── package.json
+│   ├── pages
+│   │   ├── agents.js
+│   │   ├── _app.js
+│   │   ├── dashboard.js
+│   │   ├── faucets.js
+│   │   ├── index.js
+│   │   ├── predict.js
+│   │   ├── scraper.js
+│   │   ├── settings.js
+│   │   └── wallets.js
+│   ├── postcss.config.js
+│   ├── public
+│   │   ├── icons
+│   │   │   ├── icon-192x192.png
+│   │   │   └── icon-512x512.png
+│   │   ├── manifest.json
+│   │   └── service-worker.js
+│   ├── styles
+│   │   └── globals.css
+│   ├── tailwind.config.js
+│   ├── .vercel
+│   │   ├── project.json
+│   │   └── README.txt
+│   ├── vercel_backup_1757317966.json
+│   └── vercel.json
+├── .github
+│   └── workflows
+│       └── auto-push.yml
+├── .gitignore
+├── gpt-projects
+├── hive_orchestrator.py
+├── infra
+├── k8s
+│   ├── agent-deployment.yaml
+│   ├── backend-service.yaml
+│   ├── cronjobs.yaml
+│   ├── env-secret.yaml
+│   ├── handshake-server.yaml
+│   ├── ingress.yaml
+│   ├── namespace.yaml
+│   └── workers.yaml
+├── logs
+│   ├── awakening.err.log
+│   ├── awakening.out.log
+│   ├── core_brain.err
+│   ├── core_brain.log
+│   ├── deploy_manager.err
+│   ├── deploy_manager.log
+│   ├── deploy_repos.err
+│   ├── deploy_repos.log
+│   ├── doctrine_loader.err
+│   ├── doctrine_loader.log
+│   ├── faucet.log
+│   ├── finsynapse_scraper.err
+│   ├── finsynapse_scraper.log
+│   ├── gateway.err
+│   ├── gateway.log
+│   ├── handshake_server.err
+│   ├── handshake_server_fallback.err
+│   ├── handshake_server_fallback.log
+│   ├── handshake_server.log
+│   ├── hive_orchestrator.err
+│   ├── hive_orchestrator.log
+│   ├── ignition_boot.log
+│   ├── intellabot.err
+│   ├── intellabot.log
+│   ├── prompt_installs.log
+│   ├── rclone_mount.log
+│   ├── rossetta.log
+│   └── strategygpt_loaded.log
+├── mcp_tools
+│   └── register_tools.py
+├── migrations
+│   └── omega_schema_patch.sql
+├── mtn_gpt_project -> /mnt/gpt-project
+├── prompts
+│   ├── rosetta_prompt.txt
+│   ├── shadow_agent_system.txt
+│   └── strategy
+│       └── strategy_gpt_system.txt
+├── README.md
+├── records
+│   ├── agent_diag.log
+│   ├── atlas_launch.log
+│   ├── deploy_run.log
+│   ├── folder_tree.txt
+│   ├── git_status.log
+│   ├── nl_history.log
+│   ├── rag_test.log
+│   ├── system_diagnostic_2025-09-08_02-09-53.log
+│   ├── system_diagnostic_2025-09-08_02-10-55.log
+│   └── vercel_deploy.log
+├── scripts
+│   ├── deploy.sh
+│   ├── env_loader.sh
+│   ├── fix_and_deploy_vercel.sh
+│   ├── fix_systemd.sh
+│   ├── fix_systemd.sh.save
+│   ├── ignition_shadow.sh
+│   ├── install_infinity_manus_x_pro.sh
+│   ├── install_infinity_manus_x.sh
+│   ├── install_manus_clone.sh
+│   ├── install_strategy_prompt.sh
+│   ├── nano_superprompt.sh
+│   ├── nl.sh
+│   ├── parallel_deploy.sh
+│   ├── push_to_github.sh
+│   ├── system_diagnostic.sh
+│   └── test_mnt_push.sh
+├── services
+│   └── orchestrator
+│       └── app.py
+└── .vercel
+    ├── project.json
+    └── README.txt
+
+40 directories, 138 files
