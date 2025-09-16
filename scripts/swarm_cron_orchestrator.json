@@ -1,0 +1,8 @@
+{
+  "job": "key_rotation_global",
+  "schedule": "0 * * * *",
+  "command": "node /opt/infinity_x_one/backend/key_rotation/rotate_keys.ts",
+  "log_file": "/opt/infinity_x_one/logs/key_rotation.log",
+  "enabled": true,
+  "description": "🔑 Rotates API keys hourly (global Infinity_X_One)"
+}
