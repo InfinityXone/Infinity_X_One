@@ -3,3 +3,4 @@ filter-repo/
 *.log
 *.tmp
 *.sh~
+env/*.env
