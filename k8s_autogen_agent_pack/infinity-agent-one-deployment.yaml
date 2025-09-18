@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: infinity-agent-one
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: infinity-agent-one
+  template:
+    metadata:
+      labels:
+        app: infinity-agent-one
+    spec:
+      containers:
+      - name: agent-one
+        image: infinityxone/agent-one:latest
+        ports:
+        - containerPort: 8001
