@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: faucet-harvester
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: faucet-harvester
+  template:
+    metadata:
+      labels:
+        app: faucet-harvester
+    spec:
+      containers:
+      - name: harvester
+        image: infinityxone/harvester:latest
+        ports:
+        - containerPort: 8000
