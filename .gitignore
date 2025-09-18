@@ -6,3 +6,4 @@ filter-repo/
 env/*.env
 agents/venv/
 agents/venv/
+env/*.env*
