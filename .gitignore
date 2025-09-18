@@ -5,3 +5,4 @@ filter-repo/
 *.sh~
 env/*.env
 agents/venv/
+agents/venv/
