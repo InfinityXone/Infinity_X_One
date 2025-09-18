@@ -4,3 +4,4 @@ filter-repo/
 *.tmp
 *.sh~
 env/*.env
+agents/venv/
