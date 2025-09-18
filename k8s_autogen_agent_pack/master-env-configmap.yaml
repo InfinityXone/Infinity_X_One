@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: infinity-env-config
+data:
+  MASTER_ENV: |
+    MODE=production
+    DEFAULT_AGENT_NAME=Infinity Agent One
+    MAX_AGENTS=100000
+    
+    SUPABASE_URL=https://xzxkyrdelmbqlcucmzpx.supabase.co
+    SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+    SUPABASE_ANON_KEY=your-anon-key
+    QSTASH_TOKEN=your-qstash-token
+    VERCEL_TOKEN=your-vercel-token
+    
+    GITHUB_TOKEN=your-github-token
+    SSH_KEY_PATH=~/.ssh/id_rsa_infinity
+    
+    MEMORY_TABLE_NAME=memory
+    MEMORY_SYNC_INTERVAL=5min
+    MEMORY_LOG_FILE=/opt/infinity_x_one/logs/memory.log
+    
+    WALLET_REGISTRY_TABLE=wallet_registry
+    WALLET_ROTATION_INTERVAL=hourly
+    WALLET_AGENT_SEED_ROTATION=true
+    
+    COINBASE_API_KEY=your-coinbase-key
+    BINANCE_API_KEY=your-binance-key
+    
+    RCLONE_REMOTE=google_drive
+    GDRIVE_PATH=Infinity_X_One/Memory
+    RCLONE_CONFIG_PATH=~/.config/rclone/rclone.conf
+    
+    OPENAI_KEY=your-openai-key
+    GROQ_KEY=your-groq-key
+    ANTHROPIC_KEY=your-anthropic-key
