@@ -303,3 +303,13 @@ may have crashed in this repository earlier:
 remove the file manually to continue.
 Everything up-to-date
 cp: cannot create regular file '/opt/infinity_x_one/test_autodownload_1758278519.txt': File exists
+fatal: Unable to create '/opt/infinity_x_one/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To github.com:InfinityXone/infinity_x_one.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 77bec8b2ee6b2f94b6d70077e6c0994745fb765e but expected 136453f6f6adae4dd05ced5b78e6c92e46d3fe59)
+error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
