@@ -242,3 +242,10 @@ an editor opened by 'git commit'. Please make sure all processes
 are terminated then try again. If it still fails, a git process
 may have crashed in this repository earlier:
 remove the file manually to continue.
+To github.com:InfinityXone/infinity_x_one.git
+   ec367b5..bde5ea0  main -> main
+error: insufficient permission for adding an object to repository database .git/objects
+error: Error building trees
+To github.com:InfinityXone/infinity_x_one.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 0fd768ed819551955127f5713bf78c8f2ccaf3a6 but expected bde5ea053b95ad14b86d4b4d9802cbeb2ca8d553)
+error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
