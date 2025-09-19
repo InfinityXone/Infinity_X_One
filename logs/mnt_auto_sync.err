@@ -672,3 +672,11 @@ Everything up-to-date
 To github.com:InfinityXone/infinity_x_one.git
  ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at f130814e0db74a18d7bf9033ebccc275c6533c51 but expected 6773075b267e87be719a42e30af41753f69af80a)
 error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
+cp: cannot create regular file '/opt/infinity_x_one/.superbash_layer_a.sh.swp': File exists
+fatal: Unable to create '/opt/infinity_x_one/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
