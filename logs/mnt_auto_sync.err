@@ -569,3 +569,7 @@ error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
 To github.com:InfinityXone/infinity_x_one.git
    92e1653..abc71fc  main -> main
 Everything up-to-date
+To github.com:InfinityXone/infinity_x_one.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 2c785a5fde8023e833b7d6fcb44630d736e459e4 but expected d003156858ad492d50796195fb3769a7dbc52451)
+error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
+cp: cannot stat '/mnt/data/.unbreakable_master_superbash.sh.swp': No such file or directory
