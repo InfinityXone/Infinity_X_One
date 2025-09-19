@@ -72,3 +72,6 @@ may have crashed in this repository earlier:
 remove the file manually to continue.
 To github.com:InfinityXone/infinity_x_one.git
    04f4da4..b5d35c1  main -> main
+To github.com:InfinityXone/infinity_x_one.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 92f9990c577fe88962300b13420a46a97255e122 but expected b5d35c171973b1625990eecfd46f9ebe54b1ed98)
+error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'

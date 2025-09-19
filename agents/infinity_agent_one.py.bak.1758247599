@@ -1,4 +1,4 @@
-import time, logging, socket
+import uvicorn, socket, logging
 
 logging.basicConfig(
     filename="/opt/infinity_x_one/logs/agent_one.log",
@@ -12,16 +12,14 @@ def find_free_port(preferred_ports=[8000, 8001, 8101]):
             try:
                 s.bind(("0.0.0.0", port))
                 s.close()
-                logging.info(f"✅ Selected free port (heartbeat mode only): {port}")
+                logging.info(f"✅ Selected free port: {port}")
                 return port
             except OSError:
                 logging.warning(f"⚠️ Port {port} busy, trying next...")
                 continue
-    return None
+    raise RuntimeError("❌ No free ports found in preferred list")
 
 if __name__ == "__main__":
     port = find_free_port()
-    logging.info(f"🚀 Infinity Agent One started in HEARTBEAT MODE on port {port}")
-    while True:
-        logging.info("✅ Agent One heartbeat — service is alive")
-        time.sleep(30)
+    logging.info(f"🚀 Infinity Agent One starting on port {port}")
+    uvicorn.run("agent_one_app:app", host="0.0.0.0", port=port)
