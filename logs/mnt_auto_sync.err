@@ -705,3 +705,6 @@ may have crashed in this repository earlier:
 remove the file manually to continue.
 Everything up-to-date
 cp: cannot stat '/mnt/data/.superbash_layer_a.sh.swp': No such file or directory
+To github.com:InfinityXone/infinity_x_one.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at d12ff31461c46f262b2e524d53c76f40ddc3963a but expected b63f4ed84608eaadec21f2cf0db3b41825863baa)
+error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
