@@ -711,3 +711,20 @@ error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
 To github.com:InfinityXone/infinity_x_one.git
  ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at da40e9829d57f8dfac7c65aaf1f149965e8bb721 but expected d12ff31461c46f262b2e524d53c76f40ddc3963a)
 error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
+To github.com:InfinityXone/infinity_x_one.git
+   da40e98..1d5219e  main -> main
+fatal: Unable to create '/opt/infinity_x_one/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+fatal: Unable to create '/opt/infinity_x_one/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+Everything up-to-date
