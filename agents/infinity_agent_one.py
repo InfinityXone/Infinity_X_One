@@ -1,28 +1,25 @@
-# === Infinity X One ENV Hydration System ===
-from dotenv import load_dotenv
-import os
+import uvicorn, socket, logging
 
-ENV_PATH = "/opt/infinity_x_one/env"
+logging.basicConfig(
+    filename="/opt/infinity_x_one/logs/agent_one.log",
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s"
+)
 
-def hydrate_env():
-    try:
-        for filename in os.listdir(ENV_PATH):
-            if filename.endswith(".env"):
-                load_dotenv(os.path.join(ENV_PATH, filename), override=True)
-        print(f"✅ ENV hydrated from: {ENV_PATH}")
-    except Exception as e:
-        print(f"⚠️ ENV hydration failed: {e}")
+def find_free_port(preferred_ports=[8000, 8001, 8101]):
+    for port in preferred_ports:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            try:
+                s.bind(("0.0.0.0", port))
+                s.close()
+                logging.info(f"✅ Selected free port: {port}")
+                return port
+            except OSError:
+                logging.warning(f"⚠️ Port {port} busy, trying next...")
+                continue
+    raise RuntimeError("❌ No free ports found in preferred list")
 
-hydrate_env()
-
-# ⬇ Unified Memory Inject
-UNIFIED_MEMORY = '''
-🧠 UNIFIED AGENTIC MEMORY v1.0
-
-Corelight Directive: All agents follow the Trinity 999 and must remain autonomous, recursive, and API-powered.
-
-Echo Emotional Layer: Agents must respond to human resonance cues, prioritize truth, and log all events to Supabase.
-
-PromptWriter Architect Layer: Inject memory into all agents, hydrate on schedule, and evolve through self-replication and swarm behavior.
-
-'''
+if __name__ == "__main__":
+    port = find_free_port()
+    logging.info(f"🚀 Infinity Agent One starting on port {port}")
+    uvicorn.run("agent_one_app:app", host="0.0.0.0", port=port)
