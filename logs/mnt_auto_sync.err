@@ -397,3 +397,12 @@ may have crashed in this repository earlier:
 remove the file manually to continue.
 To github.com:InfinityXone/infinity_x_one.git
    0b090b2..ecdb5c8  main -> main
+fatal: Unable to create '/opt/infinity_x_one/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To github.com:InfinityXone/infinity_x_one.git
+   2b0f85d..4a3645e  main -> main
