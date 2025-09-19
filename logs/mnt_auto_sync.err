@@ -167,3 +167,24 @@ error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
 To github.com:InfinityXone/infinity_x_one.git
  ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 8c8bff73c912ba36bd206e6252e0ef8d778d2b4f but expected aa820d044f4fadb73fc4cc1a34b35a8958e78628)
 error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
+fatal: Unable to create '/opt/infinity_x_one/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+fatal: Unable to create '/opt/infinity_x_one/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+To github.com:InfinityXone/infinity_x_one.git
+   8c8bff7..78b0b08  main -> main
+error: insufficient permission for adding an object to repository database .git/objects
+error: Error building trees
+To github.com:InfinityXone/infinity_x_one.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 8770141142e66d50a6a77fe03d2ccca56725c19e but expected 78b0b08b22bc505cd131e13cfa752e3c222b4556)
+error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
