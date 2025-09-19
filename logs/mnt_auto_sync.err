@@ -202,3 +202,6 @@ an editor opened by 'git commit'. Please make sure all processes
 are terminated then try again. If it still fails, a git process
 may have crashed in this repository earlier:
 remove the file manually to continue.
+To github.com:InfinityXone/infinity_x_one.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at e3576b51d15da5d51fdc7f849a4338df74798b44 but expected 8770141142e66d50a6a77fe03d2ccca56725c19e)
+error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
