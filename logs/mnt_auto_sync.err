@@ -51,3 +51,5 @@ an editor opened by 'git commit'. Please make sure all processes
 are terminated then try again. If it still fails, a git process
 may have crashed in this repository earlier:
 remove the file manually to continue.
+To github.com:InfinityXone/infinity_x_one.git
+   82ed0d5..b421b02  main -> main
