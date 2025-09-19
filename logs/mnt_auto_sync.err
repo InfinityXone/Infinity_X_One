@@ -123,3 +123,5 @@ remove the file manually to continue.
 To github.com:InfinityXone/infinity_x_one.git
  ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 52c6eac80cd8a091b81cc7e03fc41ff4c3e454f0 but expected ad0cc2d9a6e6f2b4fb9512f6dbb9066a847a925d)
 error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
+To github.com:InfinityXone/infinity_x_one.git
+   752252b..e3005f2  main -> main
