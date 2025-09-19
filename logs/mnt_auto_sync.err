@@ -537,3 +537,6 @@ To github.com:InfinityXone/infinity_x_one.git
    ad0818e..361aaeb  main -> main
 To github.com:InfinityXone/infinity_x_one.git
    361aaeb..e801330  main -> main
+To github.com:InfinityXone/infinity_x_one.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 1e48f69d08d8ed16e6e97fa83711e75de3e4963c but expected e801330bc87204a2a949acb62c1aa2bb840309ec)
+error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
