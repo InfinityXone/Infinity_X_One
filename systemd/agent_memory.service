@@ -1,0 +1,13 @@
+[Unit]
+Description=Infinity X One - Agent Memory Hydration
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/infinity_x_one/agents/memory_hydrate.py
+WorkingDirectory=/opt/infinity_x_one/agents
+EnvironmentFile=/opt/infinity_x_one/env/supabase.env
+User=infinity-x-one
+
+[Install]
+WantedBy=multi-user.target
