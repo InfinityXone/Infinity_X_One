@@ -566,3 +566,5 @@ To github.com:InfinityXone/infinity_x_one.git
 To github.com:InfinityXone/infinity_x_one.git
  ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 92e1653d08122391bd82eeab96cd4d9fd0004d75 but expected b5f830105d12310bd698c6a0bd3cf7083b02e79c)
 error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
+To github.com:InfinityXone/infinity_x_one.git
+   92e1653..abc71fc  main -> main
