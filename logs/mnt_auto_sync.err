@@ -654,3 +654,10 @@ an editor opened by 'git commit'. Please make sure all processes
 are terminated then try again. If it still fails, a git process
 may have crashed in this repository earlier:
 remove the file manually to continue.
+To github.com:InfinityXone/infinity_x_one.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
