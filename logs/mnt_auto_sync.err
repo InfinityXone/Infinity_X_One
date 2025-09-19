@@ -509,3 +509,6 @@ To github.com:InfinityXone/infinity_x_one.git
 error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
 To github.com:InfinityXone/infinity_x_one.git
    0b52ee2..abb291a  main -> main
+To github.com:InfinityXone/infinity_x_one.git
+   6cbfe61..0726773  main -> main
+cp: cannot stat '/mnt/data/.unbreakable_bootstrap.sh.swp': No such file or directory
