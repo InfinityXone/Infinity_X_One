@@ -368,3 +368,6 @@ may have crashed in this repository earlier:
 remove the file manually to continue.
 To github.com:InfinityXone/infinity_x_one.git
    b4be33b..8263a1d  main -> main
+To github.com:InfinityXone/infinity_x_one.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 93fbd8a8637f08c6acf21e68b80daf88298420db but expected 8263a1d9338cd9f71b6d77a1d08dafaa6c7d602d)
+error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
