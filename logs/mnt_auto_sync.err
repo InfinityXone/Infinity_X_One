@@ -484,3 +484,4 @@ To github.com:InfinityXone/infinity_x_one.git
    7cbc44f..d12613d  main -> main
 To github.com:InfinityXone/infinity_x_one.git
    d12613d..61669d3  main -> main
+cp: cannot stat '/mnt/data/.super_diagnostic.sh.swp': No such file or directory
