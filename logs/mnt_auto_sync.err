@@ -816,3 +816,6 @@ To github.com:InfinityXone/infinity_x_one.git
 cp: cannot create regular file '/opt/infinity_x_one/test_autodownload_1758334447.txt': File exists
 To github.com:InfinityXone/infinity_x_one.git
    63f32e0..7f3557b  main -> main
+To github.com:InfinityXone/infinity_x_one.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 97b50e83b51bd38387eb9ae3ae35b1bc1e80fd17 but expected 7f3557be1328c68668d1c3881f49c538899ce0b6)
+error: failed to push some refs to 'github.com:InfinityXone/infinity_x_one.git'
