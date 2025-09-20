@@ -838,3 +838,8 @@ To github.com:InfinityXone/infinity_x_one.git
    075bd05..c6c36f7  main -> main
 Setting up watches.  Beware: since -r was given, this may take a while!
 Watches established.
+To github.com:InfinityXone/infinity_x_one.git
+   9534800..f916dff  main -> main
+error: insufficient permission for adding an object to repository database .git/objects
+error: Error building trees
+Everything up-to-date
